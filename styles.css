@@ -1,0 +1,48 @@
+/* Custom styles you might need beyond Tailwind */
+
+/* Custom visualizer bars for the audio player */
+.audio-bar {
+    width: 3px;
+    background-color: rgb(79 70 229 / 0.3); /* indigo-600/30 */
+    border-radius: 4px;
+    height: 100%;
+    transition: all 0.2s ease;
+    transform-origin: center;
+}
+
+.audio-bar.active {
+    background-color: #F97316; /* orange-500 */
+    box-shadow: 0 0 8px #F97316;
+}
+
+/* Animations for the visualizer when playing */
+@keyframes eq {
+    0% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+    100% { transform: scaleY(0.3); }
+}
+
+.playing .audio-bar.animated {
+    animation: eq 1s infinite ease-in-out;
+}
+
+/* Ensure smooth scrolling behavior especially for anchor links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* to account for sticky header */
+}
+
+/* Hide scrollbar for cleaner look if desired */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #4F46E5; 
+}
