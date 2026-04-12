@@ -591,7 +591,7 @@
                                     class="w-4 h-4 bg-brand-dark border-white/20 rounded accent-brand-orange">
                             </div>
                             <label for="rgpd" class="text-xs text-slate-500">
-                                He leído y acepto la <a href="#" class="text-brand-indigo hover:underline">política de
+                                He leído y acepto la <a href="politica-privacidad.html" class="text-brand-indigo hover:underline" target="_blank">política de
                                     privacidad</a>.
                             </label>
                         </div>
@@ -621,13 +621,24 @@
                 class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm text-slate-600">
                 <p>&copy; 2024 Italica IA. Todos los derechos reservados.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-slate-300 transition-colors">Aviso Legal</a>
-                    <a href="#" class="hover:text-slate-300 transition-colors">Privacidad</a>
-                    <a href="#" class="hover:text-slate-300 transition-colors">Cookies</a>
+                    <a href="aviso-legal.html" class="hover:text-slate-300 transition-colors">Aviso Legal</a>
+                    <a href="politica-privacidad.html" class="hover:text-slate-300 transition-colors">Privacidad</a>
+                    <a href="politica-cookies.html" class="hover:text-slate-300 transition-colors">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 w-full bg-brand-dark/95 backdrop-blur-md border-t border-white/10 z-[100] transform translate-y-full transition-transform duration-500 flex flex-col md:flex-row items-center justify-between p-4 px-6 md:px-12 gap-4">
+        <div class="text-sm text-slate-400 max-w-4xl">
+            <p>Utilizamos cookies propias y de terceros para garantizar el funcionamiento técnico de la web y analizar de forma anónima el comportamiento de navegación para mejorar nuestro servicio. Puede aceptar o configurar qué cookies permite. <a href="politica-cookies.html" class="text-brand-indigo hover:underline ml-1">Más información</a>.</p>
+        </div>
+        <div class="flex gap-3 flex-shrink-0 w-full md:w-auto mt-2 md:mt-0">
+            <button id="rejectCookies" class="flex-1 md:flex-none px-4 py-2 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors text-sm font-semibold">Rechazar opcionales</button>
+            <button id="acceptCookies" class="flex-1 md:flex-none px-4 py-2 bg-brand-indigo hover:bg-indigo-500 rounded-lg text-white transition-colors text-sm font-semibold shadow-[0_0_15px_-3px_#4F46E5]">Aceptar todas</button>
+        </div>
+    </div>
 
     <!-- Script de Inicialización y Lógica -->
     <script src="./js/app.js"></script>

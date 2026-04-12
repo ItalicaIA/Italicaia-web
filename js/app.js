@@ -47,7 +47,30 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = `<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Redirigiendo...`;
         lucide.createIcons();
         submitBtn.classList.add('opacity-75');
-        // No prevenimos el comportamiento por defecto para que el navegador cambie de página a FormSubmit
-    });
+        });
 
+    // 4. Cookie Banner Logic
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptCookiesBtn = document.getElementById('acceptCookies');
+    const rejectCookiesBtn = document.getElementById('rejectCookies');
+
+    if (cookieBanner && acceptCookiesBtn && rejectCookiesBtn) {
+        // Check if consent already exists
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        
+        if (!cookieConsent) {
+            // Show banner after a short delay for smooth animation
+            setTimeout(() => {
+                cookieBanner.classList.remove('translate-y-full');
+            }, 500);
+        }
+
+        const hideBanner = (status) => {
+            localStorage.setItem('cookieConsent', status);
+            cookieBanner.classList.add('translate-y-full');
+        };
+
+        acceptCookiesBtn.addEventListener('click', () => hideBanner('accepted'));
+        rejectCookiesBtn.addEventListener('click', () => hideBanner('rejected'));
+    }
 });
