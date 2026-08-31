@@ -1,705 +1,983 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Básico -->
-    <title>Itálica IA | Automatización con IA para empresas</title>
-    <meta name="description"
-        content="Automatizamos procesos con IA. Atención telefónica que atiende y agenda 24/7, y paneles de control con avisos automáticos que leen tus sistemas para que no se te escape nada importante.">
-    <meta name="keywords"
-        content="inteligencia artificial, recepcionista virtual, asistente telefónico IA, automatización de citas, empresas, clínicas, inmobiliarias, hostelería">
-    <meta name="author" content="Itálica IA">
-    <link rel="canonical" href="https://italicaia.com/">
-    <meta name="robots" content="index, follow">
+<title>Itálica IA | Automatizamos el trabajo repetitivo de tu empresa</title>
+<meta name="description" content="Montamos sistemas que atienden las llamadas y los mensajes que entran, pasan los datos a tu CRM o a tu ERP y llevan los procesos internos que hoy alguien hace a mano. Madrid.">
+<link rel="canonical" href="https://italicaia.com/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Itálica IA">
 
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://italicaia.com/">
-    <meta property="og:title" content="Itálica IA | Automatización con IA para empresas">
-    <meta property="og:description"
-        content="Automatización con IA: atención telefónica que agenda 24/7 y paneles de control con avisos automáticos que leen tus sistemas. Nada importante se te escapa.">
-    <meta property="og:image"
-        content="https://res.cloudinary.com/did2h57rv/image/upload/v1773168384/Logo_Italica_IA_tv9zmm.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://italicaia.com/">
+<meta property="og:title" content="Itálica IA | Automatizamos el trabajo repetitivo de tu empresa">
+<meta property="og:description" content="Atendemos lo que entra por teléfono, correo o WhatsApp y llevamos los procesos internos que hoy se hacen a mano.">
+<meta property="og:image" content="https://italicaia.com/logo.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+<link rel="icon" href="logo.png" type="image/png">
 
-    <!-- Tailwind CSS (CDN para desarrollo rápido sin Node.js) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#020617', // Slate 950
-                            light: '#f8fafc', // Slate 50
-                            indigo: '#4F46E5', // Acento Trust
-                            orange: '#F97316', // Acento CTA
-                            orangeHover: '#EA580C',
-                        }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --arena:      #EDE6D7;
+    --arena-alta: #F5F0E4;
+    --arena-baja: #E2DAC8;
+    --espresso:   #1C1611;
+    --linea:      #D3C9B4;
+    --linea-sut:  #E0D8C6;
+    --gris:       #5D5449;
+    --gris-claro: #C3BBAC;
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    --acento:      #6B6134;
+    --acento-lum:  #9C8F4A;
+    --granate:     #750C1D;
+    --granate-lum: #B8505E;
+    --verde-ok:    #4A6B45;
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    --display: "Instrument Serif", Georgia, serif;
+    --texto:   "Karla", -apple-system, Segoe UI, sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:20px}
+  body{
+    margin:0;background:var(--arena);color:var(--espresso);
+    font-family:var(--texto);font-size:17px;line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+  .env{max-width:1340px;margin:0 auto;padding:0 44px}
+  @media(max-width:720px){.env{padding:0 22px}}
+
+  .etq{
+    font-size:11.5px;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--acento);
+  }
+  h2{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(31px,4.4vw,54px);line-height:1.06;letter-spacing:-.015em;
+    margin:16px 0 0;max-width:20ch;text-wrap:balance;
+  }
+  h2 i{color:var(--acento)}
+  .cab{margin-bottom:46px}
+  .cab p{margin:18px 0 0;color:var(--gris);max-width:56ch;font-size:17.5px}
+
+  /* ---------- barra ---------- */
+  .barra{border-bottom:1px solid var(--linea-sut)}
+  .barra-int{display:flex;align-items:center;justify-content:space-between;height:86px}
+  .marca{font-family:var(--display);font-size:27px}
+  .marca i{color:var(--granate)}
+  .nav{display:flex;gap:28px;align-items:center}
+  .nav a{color:var(--gris);text-decoration:none;font-size:14.5px;font-weight:500}
+  .nav a:hover{color:var(--espresso)}
+  .pill{
+    background:var(--espresso);color:var(--arena-alta);
+    padding:11px 22px;border-radius:999px;font-size:14px;font-weight:600;
+    text-decoration:none;transition:background .18s;
+  }
+  .pill:hover{background:var(--acento)}
+  @media(max-width:900px){.nav a:not(.pill){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:104px 0 52px;text-align:center}
+  .hero .etq{display:block;margin-bottom:28px}
+  h1{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(38px,5.6vw,74px);line-height:1.07;letter-spacing:-.02em;
+    margin:0 auto 28px;max-width:23ch;text-wrap:balance;
+  }
+  h1 i{color:var(--acento)}
+  .entradilla b{color:var(--espresso);font-weight:600}
+  .entradilla{margin:0 auto 38px;max-width:60ch;color:var(--gris);font-size:19px;line-height:1.7;text-wrap:pretty}
+  .acciones{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{
+    background:var(--espresso);color:var(--arena-alta);
+    padding:17px 34px;border-radius:999px;text-decoration:none;
+    font-size:15px;font-weight:600;transition:background .18s;
+  }
+  .btn:hover{background:var(--acento)}
+  .btn-2{
+    padding:17px 30px;border-radius:999px;text-decoration:none;
+    font-size:15px;font-weight:600;color:var(--espresso);
+    border:1px solid var(--linea);transition:border-color .18s,background .18s;
+  }
+  .btn-2:hover{border-color:var(--espresso);background:var(--arena-alta)}
+  .tira{
+    margin-top:50px;padding-top:24px;border-top:1px solid var(--linea-sut);
+    display:flex;justify-content:center;flex-wrap:wrap;
+  }
+  .tira .p{padding:6px 28px;border-right:1px solid var(--linea-sut);font-size:13.5px;color:var(--gris)}
+  .tira .p:last-child{border-right:none}
+  .tira .p b{color:var(--espresso);font-weight:600}
+  @media(max-width:760px){.tira .p{border-right:none;padding:5px 14px}}
+
+  /* ---------- la cadena ---------- */
+  .cadena{background:var(--espresso);color:var(--arena-alta);padding:76px 0}
+  .cadena .etq{color:var(--acento-lum);display:block;text-align:center;margin-bottom:14px}
+  .cadena h2{color:var(--arena-alta);text-align:center;margin:0 auto 16px;max-width:22ch}
+  .cadena h2 i{color:var(--acento-lum)}
+  .cadena .lead{text-align:center;color:var(--gris-claro);max-width:64ch;margin:0 auto 46px;font-size:17.5px}
+  .cad-flujo{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}
+  .cad-col{padding:0 26px}
+  .cad-col .t{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+              color:var(--gris-claro);margin-bottom:16px;text-align:center}
+  .cad-lista{display:flex;flex-direction:column;gap:8px}
+  .cad-item{font-size:14.5px;padding:10px 14px;border:1px solid rgba(245,240,228,.24);
+            border-radius:4px;text-align:center}
+  .cad-flecha{color:var(--acento-lum);font-size:22px;padding:0 4px;text-align:center}
+  .cad-nucleo{border:1px solid var(--acento-lum);border-radius:4px;padding:24px 18px;text-align:center}
+  .cad-nucleo b{font-family:var(--display);font-weight:400;font-size:27px;display:block;margin-bottom:7px}
+  .cad-nucleo span{font-size:12.5px;color:var(--gris-claro);line-height:1.5;display:block}
+  @media(max-width:980px){
+    .cad-flujo{grid-template-columns:1fr}
+    .cad-col{padding:0}
+    .cad-flecha{transform:rotate(90deg);padding:16px 0}
+    .cad-nucleo{margin:0 auto;max-width:340px}
+  }
+
+  .puente{
+    max-width:74ch;margin:0 0 26px;font-size:16.5px;color:var(--gris);line-height:1.68;
+    padding-left:16px;border-left:2px solid var(--linea);
+  }
+  .puente b{color:var(--espresso);font-weight:600}
+
+  /* ---------- continuacion de la cadena ---------- */
+  .despues{margin-top:28px;border-left:3px solid var(--acento);padding:4px 0 4px 22px;max-width:74ch}
+  .despues .etq{display:block;margin-bottom:9px}
+  .despues p{margin:0;font-size:17px;color:var(--gris);line-height:1.7}
+  .despues p b{color:var(--espresso);font-weight:600}
+
+  /* ---------- bloques de demostración ---------- */
+  .demo-sec{padding:84px 0;border-top:1px solid var(--linea-sut)}
+  .demo-sec.alt{background:var(--arena-alta)}
+  .num-demo{
+    font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--acento);display:block;margin-bottom:14px;
+  }
+
+  .tarj{
+    border:1px solid var(--linea);border-radius:6px;overflow:hidden;
+    background:var(--arena-alta);
+  }
+  .demo-sec.alt .tarj{background:var(--arena)}
+  .tarj-cab{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    padding:14px 22px;border-bottom:1px solid var(--linea);
+    font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gris);
+  }
+  .reloj{font-variant-numeric:tabular-nums;font-weight:500;letter-spacing:.06em}
+
+  /* número de teléfono */
+  .telefono{
+    text-align:center;padding:44px 24px;
+    border:1px solid var(--acento);border-radius:6px;background:var(--arena-alta);
+    margin-bottom:34px;
+  }
+  .demo-sec.alt .telefono{background:var(--arena)}
+  .telefono .lab{
+    font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gris);display:block;margin-bottom:16px;
+  }
+  .telefono a{
+    font-family:var(--display);font-size:clamp(38px,6.2vw,68px);line-height:1;
+    color:var(--espresso);text-decoration:none;letter-spacing:.01em;
+    display:inline-block;transition:color .18s;
+  }
+  .telefono a:hover{color:var(--acento)}
+  .telefono .pie{margin:18px 0 0;font-size:14.5px;color:var(--gris)}
+
+  /* dos columnas de demo */
+  .dos{display:grid;grid-template-columns:1.12fr .88fr}
+  .dos > div + div{border-left:1px solid var(--linea)}
+  @media(max-width:940px){
+    .dos{grid-template-columns:1fr}
+    .dos > div + div{border-left:none;border-top:1px solid var(--linea)}
+  }
+
+  /* conversación */
+  .charla{padding:22px;display:flex;flex-direction:column;gap:14px}
+  .turno{display:grid;grid-template-columns:60px 1fr;gap:12px;align-items:baseline}
+  .turno .quien{
+    font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--gris);padding-top:4px;
+  }
+  .turno.ia .quien{color:var(--acento)}
+  .turno .dice{
+    margin:0;font-size:15.5px;line-height:1.58;padding:11px 14px;
+    background:var(--arena-baja);border-radius:4px 12px 12px 12px;
+  }
+  .turno.ia{margin-left:28px}
+  .turno.ia .quien{color:var(--acento)}
+  .turno.ia .dice{
+    background:rgba(107,97,52,.11);border-radius:12px 4px 12px 12px;
+    border-left:3px solid var(--acento);
+  }
+  @media(max-width:940px){.turno.ia{margin-left:18px}}
+
+  /* mensaje entrante tipo WhatsApp */
+  .msg{padding:22px}
+  .msg-meta{font-size:12px;color:var(--gris);margin-bottom:12px;letter-spacing:.04em}
+  .msg-burbuja{
+    background:var(--arena-baja);border-radius:4px 14px 14px 14px;
+    padding:16px 18px;font-size:16.5px;line-height:1.6;margin:0;
+    border:1px solid var(--linea-sut);
+  }
+  .msg-resp{
+    background:var(--espresso);color:var(--arena-alta);
+    border-radius:14px 4px 14px 14px;padding:14px 18px;font-size:15.5px;
+    line-height:1.6;margin:16px 0 0;
+  }
+  .msg-resp .m{display:block;font-size:11px;color:var(--gris-claro);margin-top:8px;letter-spacing:.08em}
+
+  /* lista de acciones */
+  .acc{padding:22px;display:flex;flex-direction:column}
+  .acc-fila{
+    display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start;
+    padding:13px 0;border-bottom:1px solid var(--linea-sut);
+  }
+  .acc-fila:last-child{border-bottom:none}
+  .acc-fila .sis{
+    font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--gris);display:block;margin-bottom:4px;
+  }
+  .acc-fila p{margin:0;font-size:15.5px;line-height:1.5}
+  .acc-fila.regla{background:var(--arena-baja);border-radius:4px;padding:13px 14px;margin:4px -14px;border-bottom-color:transparent}
+  .chip{
+    font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+    padding:4px 9px;border-radius:999px;white-space:nowrap;border:1px solid;
+  }
+  .chip.ok{color:var(--verde-ok);border-color:var(--verde-ok)}
+  .chip.lee{color:var(--gris);border-color:var(--linea);background:var(--arena-baja)}
+  .acc-cab{
+    font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--acento);padding-bottom:12px;margin-bottom:4px;
+    border-bottom:1px solid var(--linea);
+  }
+  .chip.tr{color:var(--granate);border-color:var(--granate)}
+  .chip.rg{color:var(--arena-alta);border-color:var(--acento);background:var(--acento)}
+  .chip.rev{color:var(--granate);border-color:var(--granate)}
+
+  .tarj-pie{
+    padding:14px 22px;border-top:1px solid var(--linea);
+    font-size:13.5px;color:var(--gris);background:var(--arena-baja);
+  }
+  .tarj-pie b{color:var(--espresso);font-weight:600}
+
+  /* documento */
+  .doc{padding:22px}
+  .doc-adj{
+    display:flex;align-items:center;gap:12px;padding:12px 14px;
+    border:1px solid var(--linea);border-radius:4px;background:var(--arena-baja);
+    font-size:14.5px;margin-bottom:18px;
+  }
+  .doc-adj .ext{
+    font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--arena-alta);
+    background:var(--granate);padding:4px 7px;border-radius:3px;
+  }
+  .lineas{width:100%;border-collapse:collapse;font-size:14.5px}
+  .lineas th{
+    text-align:left;font-size:10px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gris);padding:0 0 9px;border-bottom:1px solid var(--linea);
+  }
+  .lineas td{padding:10px 0;border-bottom:1px solid var(--linea-sut);vertical-align:middle}
+  .lineas td:last-child,.lineas th:last-child{text-align:right}
+  .lineas .ref{font-variant-numeric:tabular-nums;color:var(--gris);font-size:13.5px}
+  .lineas tr.falla td{background:var(--arena-baja)}
+  .resumen-doc{
+    margin-top:16px;font-size:14.5px;color:var(--gris);
+    border-left:2px solid var(--acento);padding-left:13px;
+  }
+
+  /* aviso por correo */
+  .correo{padding:22px}
+  .correo-cab{border-bottom:1px solid var(--linea-sut);padding-bottom:14px;margin-bottom:6px}
+  .correo-cab .asunto{font-family:var(--display);font-size:23px;margin:0 0 4px}
+  .correo-cab .de{font-size:13px;color:var(--gris)}
+  .pie-correo{
+    margin:16px 0 0;padding-top:12px;border-top:1px solid var(--linea-sut);
+    font-size:13.5px;color:var(--gris);
+  }
+  .pdte{
+    display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;
+    padding:15px 0;border-bottom:1px solid var(--linea-sut);
+  }
+  .pdte:last-of-type{border-bottom:none}
+  .pdte b{font-weight:600}
+  .pdte span{display:block;font-size:14px;color:var(--gris);margin-top:3px}
+  .pdte .sem{display:inline-block;margin-top:0}
+  @media(max-width:600px){.pdte{grid-template-columns:1fr}.pdte .sem{justify-self:start}}
+  .grupo{
+    font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--acento);margin:20px 0 2px;padding-top:14px;border-top:1px solid var(--linea-sut);
+  }
+  .correo-cab + .grupo{margin-top:12px;padding-top:0;border-top:none}
+  .aviso{
+    display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+    padding:14px 0;border-bottom:1px solid var(--linea-sut);
+  }
+  .aviso:last-child{border-bottom:none}
+  .aviso .n{
+    font-family:var(--display);font-size:30px;line-height:1;
+    font-variant-numeric:tabular-nums;min-width:44px;
+  }
+  .aviso .n.alerta{color:var(--granate)}
+  .aviso p{margin:0;font-size:15.5px;line-height:1.45}
+  .aviso p span{display:block;font-size:13px;color:var(--gris)}
+  .sem{
+    font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+    padding:4px 9px;border-radius:999px;white-space:nowrap;border:1px solid;
+  }
+  .sem.urg{color:var(--granate);border-color:var(--granate)}
+  .sem.med{color:var(--acento);border-color:var(--acento)}
+  .sem.baja{color:var(--gris);border-color:var(--linea)}
+  @media(max-width:600px){
+    .pie-correo{
+    margin:16px 0 0;padding-top:12px;border-top:1px solid var(--linea-sut);
+    font-size:13.5px;color:var(--gris);
+  }
+  .pdte{
+    display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;
+    padding:15px 0;border-bottom:1px solid var(--linea-sut);
+  }
+  .pdte:last-of-type{border-bottom:none}
+  .pdte b{font-weight:600}
+  .pdte span{display:block;font-size:14px;color:var(--gris);margin-top:3px}
+  .pdte .sem{display:inline-block;margin-top:0}
+  @media(max-width:600px){.pdte{grid-template-columns:1fr}.pdte .sem{justify-self:start}}
+  .grupo{
+    font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--acento);margin:20px 0 2px;padding-top:14px;border-top:1px solid var(--linea-sut);
+  }
+  .correo-cab + .grupo{margin-top:12px;padding-top:0;border-top:none}
+  .aviso{grid-template-columns:auto 1fr}
+    .sem{grid-column:2}
+  }
+
+  /* ---------- por qué importa ---------- */
+  .porque{padding:88px 0;background:var(--arena-baja);border-top:1px solid var(--linea)}
+  .escenas{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px}
+  .escena{padding:0 34px;border-left:1px solid var(--linea)}
+  .escena:first-child{padding-left:0;border-left:none}
+  .escena:last-child{padding-right:0}
+  .escena h3{font-family:var(--display);font-weight:400;font-size:22px;margin:0 0 13px;line-height:1.26}
+  .escena p{margin:0;color:var(--gris);font-size:15.5px;line-height:1.7}
+  @media(max-width:880px){
+    .escenas{grid-template-columns:1fr;gap:36px}
+    .escena,.escena:first-child{padding:0 0 0 24px;border-left:1px solid var(--linea)}
+  }
+  .cuenta{margin-top:56px;padding-top:32px;border-top:1px solid var(--linea);max-width:64ch}
+  .cuenta p{margin:0;font-family:var(--display);font-size:clamp(20px,2.5vw,28px);line-height:1.45}
+  .cuenta p i{color:var(--acento)}
+
+  /* ---------- cómo empezamos ---------- */
+  .como{padding:88px 0}
+  .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--linea);margin-top:12px}
+  .paso{padding:30px 32px 8px;border-right:1px solid var(--linea)}
+  .paso:last-child{border-right:none}
+  .paso:first-child{padding-left:0}
+  .paso .n{font-family:var(--display);font-size:17px;color:var(--acento);display:block;margin-bottom:12px}
+  .paso h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0 0 11px;line-height:1.24}
+  .paso p{margin:0;color:var(--gris);font-size:16px;line-height:1.68}
+  @media(max-width:860px){
+    .pasos{grid-template-columns:1fr}
+    .paso,.paso:first-child{padding:26px 0;border-right:none;border-bottom:1px solid var(--linea)}
+    .paso:last-child{border-bottom:none}
+  }
+  .compromiso{
+    margin-top:46px;border-left:3px solid var(--granate);padding:6px 0 6px 24px;
+    max-width:62ch;
+  }
+  .compromiso p{font-family:var(--display);font-size:clamp(20px,2.4vw,27px);line-height:1.4;margin:0 0 14px}
+  .compromiso .firma{font-size:14.5px;color:var(--gris);margin:0}
+  .compromiso .firma b{color:var(--espresso);font-weight:600}
+
+  /* ---------- preguntas ---------- */
+  .preg{padding:88px 0;background:var(--arena-alta);border-top:1px solid var(--linea-sut)}
+  details{border-bottom:1px solid var(--linea)}
+  details:first-of-type{border-top:1px solid var(--linea)}
+  summary{
+    cursor:pointer;list-style:none;padding:22px 0;
+    font-family:var(--display);font-size:23px;line-height:1.3;
+    display:flex;justify-content:space-between;gap:20px;align-items:baseline;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--acento);font-size:24px;line-height:1;flex-shrink:0}
+  details[open] summary::after{content:"–"}
+  details p{margin:0 0 24px;color:var(--gris);max-width:70ch;font-size:16.5px}
+
+  /* ---------- cierre ---------- */
+  .cierre{background:var(--espresso);color:var(--arena-alta);padding:92px 0;text-align:center}
+  .cierre .etq{color:var(--acento-lum);display:block;margin-bottom:14px}
+  .cierre h2{max-width:18ch;margin:0 auto}
+  .cierre h2 i{color:var(--acento-lum)}
+  .cierre p{color:var(--gris-claro);max-width:52ch;margin:22px auto 36px;font-size:17.5px}
+  .cierre .btn{background:var(--arena-alta);color:var(--espresso)}
+  .cierre .btn:hover{background:var(--acento-lum)}
+  .cierre .pie-cta{margin:18px auto 0;font-size:13.5px;color:var(--gris-claro)}
+  .pie{padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gris)}
+
+  /* ---------- formulario ---------- */
+  .form-sec{padding:88px 0;background:var(--arena-alta);border-top:1px solid var(--linea-sut)}
+  .formulario{max-width:660px;margin:0 auto}
+  .campo{margin-bottom:22px}
+  .campo label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+               text-transform:uppercase;color:var(--gris);margin-bottom:8px}
+  .campo input,.campo textarea{
+    width:100%;font-family:var(--texto);font-size:16.5px;color:var(--espresso);
+    background:var(--arena);border:1px solid var(--linea);border-radius:4px;padding:13px 15px;
+  }
+  .campo input:focus,.campo textarea:focus{
+    outline:none;border-color:var(--acento);box-shadow:0 0 0 3px rgba(107,97,52,.13);
+  }
+  .campo textarea{min-height:118px;resize:vertical;line-height:1.6}
+  .dos-campos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:640px){.dos-campos{grid-template-columns:1fr}}
+  .rgpd{display:flex;gap:11px;align-items:flex-start;margin:6px 0 26px;font-size:14.5px;color:var(--gris)}
+  .rgpd input{margin-top:4px;accent-color:var(--acento);width:16px;height:16px;flex-shrink:0}
+  .rgpd a{color:var(--acento)}
+  .btn-enviar{
+    width:100%;background:var(--espresso);color:var(--arena-alta);border:none;
+    padding:17px;border-radius:999px;font-family:var(--texto);font-size:15.5px;
+    font-weight:600;cursor:pointer;transition:background .18s;
+  }
+  .btn-enviar:hover{background:var(--acento)}
+  .tapadera{position:absolute;left:-9999px;opacity:0}
+  .pie a{color:var(--gris);text-decoration:none}
+  .pie a:hover{color:var(--espresso);text-decoration:underline}
+
+  /* ---------- cookies ---------- */
+  .cookies{
+    position:fixed;left:0;right:0;bottom:0;z-index:150;
+    background:var(--espresso);color:var(--arena-alta);padding:18px 0;
+    transform:translateY(110%);transition:transform .4s ease;
+  }
+  .cookies.visible{transform:translateY(0)}
+  .cookies-int{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .cookies p{margin:0;font-size:14px;color:var(--gris-claro);max-width:72ch;line-height:1.6}
+  .cookies a{color:var(--acento-lum)}
+  .cookies-btns{display:flex;gap:10px;flex-shrink:0}
+  .ck{
+    padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;
+    cursor:pointer;border:1px solid;font-family:var(--texto);
+  }
+  .ck.si{background:var(--arena-alta);color:var(--espresso);border-color:var(--arena-alta)}
+  .ck.no{background:none;color:var(--arena-alta);border-color:rgba(245,240,228,.35)}
+  @media(prefers-reduced-motion:reduce){.cookies{transition:none}}
+
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
 </head>
+<body>
 
-<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-indigo selection:text-white">
+<header class="barra">
+  <div class="env barra-int">
+    <div class="marca">Itálica <i>IA</i></div>
+    <nav class="nav">
+      <a href="#pruebalo">Pruébalo</a>
+      <a href="#porque">Por qué importa</a>
+      <a href="#como">Cómo empezamos</a>
+      <a href="#formulario" class="pill">Hablemos</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Navigation -->
-    <header class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center">
-                        <img src="https://res.cloudinary.com/did2h57rv/image/upload/v1773168384/Logo_Italica_IA_tv9zmm.png"
-                            alt="Italica IA Logo"
-                            class="h-14 sm:h-16 w-auto object-contain transition-transform hover:scale-105 opacity-90 hover:opacity-100"
-                            style="filter: invert(1); mix-blend-mode: screen;">
-                    </a>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#contacto"
-                        class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/10 rounded-full transition-all durataion-200">
-                        Evaluación Gratuita
-                    </a>
-                </div>
-            </div>
+<section class="env hero">
+  <h1>Quitamos el trabajo repetitivo que <i>consume las horas de tu equipo</i>.</h1>
+  <p class="entradilla">
+    Montamos sistemas que hacen el trabajo repetitivo de tu empresa: atender lo que entra
+    por teléfono, correo o WhatsApp, y llevar <b>los procesos internos que hoy alguien saca
+    a mano cada semana</b>. Entienden qué hay que hacer, deciden según tus normas y lo
+    ejecutan en tus herramientas.
+  </p>
+  <div class="acciones">
+    <a href="#formulario" class="btn">Hablemos 15 minutos</a>
+    <a href="#pruebalo" class="btn-2">Pruébalo tú mismo</a>
+  </div>
+  <div class="tira">
+    <div class="p">Funcionando en <b>2 a 4 semanas</b></div>
+    <div class="p">Se conecta con <b>lo que ya usas</b></div>
+    <div class="p">Las herramientas quedan <b>a tu nombre</b></div>
+  </div>
+</section>
+
+<!-- POR QUÉ IMPORTA -->
+<section class="porque" id="porque">
+  <div class="env">
+    <div class="cab">
+      <span class="etq">Por qué importa</span>
+      <h2>Ahora mismo todo esto depende de que <i>haya una persona</i>.</h2>
+    </div>
+    <div class="escenas">
+      <div class="escena">
+        <h3>Alguien tiene que coger el teléfono</h3>
+        <p>Una llamada a las nueve de la noche. Un correo el domingo. Cuando alguien lo ve el lunes, esa persona ya ha llamado a otro.</p>
+      </div>
+      <div class="escena">
+        <h3>Alguien tiene que pasar los datos</h3>
+        <p>Lo que llega por un canal hay que copiarlo a mano al CRM, al calendario o al ERP. Cada copia cuesta minutos y es una ocasión de equivocarse.</p>
+      </div>
+      <div class="escena">
+        <h3>Alguien tiene que acordarse</h3>
+        <p>Presupuestos sin seguimiento, pedidos sin confirmar, revisiones que tocaban hace dos semanas. Nadie lo hizo mal: no había quién.</p>
+      </div>
+    </div>
+    <div class="cuenta">
+      <p>Haz la cuenta con tus números. Suma las horas que se van cada semana en atender, copiar datos y perseguir lo pendiente. Si sale <i>media jornada al día</i>, ahora mismo estás pagando media persona para eso. Y eso es solo el tiempo: aparte está lo que valen los clientes que se van cuando nadie coge el teléfono.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cadena">
+  <div class="env">
+    <span class="etq">Cómo funciona</span>
+    <h2>Las normas <i>las pones tú</i>.</h2>
+    <p class="lead">Antes de montar nada escribimos contigo cómo trabajáis: qué precios se dan, qué plazos
+    hay, qué se considera urgente y quién se encarga de cada cosa. El sistema no improvisa. Cuando
+    entra algo, consulta esas normas y hace lo que harías tú.</p>
+    <div class="cad-flujo">
+      <div class="cad-col">
+        <div class="t">Puede entrar por</div>
+        <div class="cad-lista">
+          <div class="cad-item">Una llamada</div>
+          <div class="cad-item">Un correo o un WhatsApp</div>
+          <div class="cad-item">Un documento que llega</div>
+          <div class="cad-item">Una fecha que se cumple</div>
         </div>
-    </header>
-
-    <!-- Hero Section (Opción A) -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background Glows -->
-        <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-brand-indigo/20 blur-[120px] rounded-full point-events-none">
+      </div>
+      <div class="cad-flecha" aria-hidden="true">→</div>
+      <div class="cad-col">
+        <div class="t">Se decide con</div>
+        <div class="cad-nucleo"><b>Tus normas</b><span>precios, plazos, urgencias,<br>quién se encarga de qué</span></div>
+      </div>
+      <div class="cad-flecha" aria-hidden="true">→</div>
+      <div class="cad-col">
+        <div class="t">Y acaba hecho en</div>
+        <div class="cad-lista">
+          <div class="cad-item">Tu CRM</div>
+          <div class="cad-item">Tu calendario</div>
+          <div class="cad-item">Tu ERP</div>
+          <div class="cad-item">El aviso a quien toca</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-950/50 border border-brand-indigo/30 text-indigo-300 text-sm font-medium mb-8">
-                <span class="relative flex h-2 w-2">
-                    <span
-                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
-                </span>
-                Creado para negocios que dependen de convertir llamadas en citas cada día
-            </div>
-
-            <h1
-                class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 leading-tight max-w-5xl mx-auto">
-                No pierdas más clientes porque <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-indigo to-indigo-400">no puedes
-                    atender el teléfono.</span>
-            </h1>
-
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                Mientras tú trabajas, atendemos, filtramos y agendamos a tus clientes al segundo.
-                <strong class="text-white font-semibold">Cero llamadas perdidas. Cero interrupciones.</strong>
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#contacto"
-                    class="w-full sm:w-auto px-8 py-4 bg-brand-orange hover:bg-brand-orangeHover text-white text-lg font-bold rounded-full transition-all shadow-[0_0_30px_-5px_#F97316] hover:shadow-[0_0_40px_-5px_#F97316] flex items-center justify-center gap-2">
-                    Solicitar Consultoría de Viabilidad
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-                <span class="text-sm text-slate-500 mt-2 sm:mt-0">15 min. Totalmente gratuita.</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problema -->
-    <section class="py-24 bg-slate-900 overflow-hidden relative border-y border-white/5" id="problema">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Si pasas el día apagando fuegos, tu negocio
-                    no crece.</h2>
-                <p class="text-slate-400 text-lg">Estar disponible 24/7 es humanamente imposible, y el mercado no
-                    espera.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Pain 1 -->
-                <div
-                    class="bg-brand-dark border border-white/5 p-8 rounded-2xl hover:border-red-500/30 transition-colors group">
-                    <div
-                        class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-500/20 transition-colors">
-                        <i data-lucide="phone-missed" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Pérdida de oportunidades por espera</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Cada llamada o mensaje sin respuesta inmediata
-                        mientras atiende su negocio es un cliente potencial que acudirá a la competencia.</p>
-                </div>
-                <!-- Pain 2 -->
-                <div
-                    class="bg-brand-dark border border-white/5 p-8 rounded-2xl hover:border-red-500/30 transition-colors group">
-                    <div
-                        class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-500/20 transition-colors">
-                        <i data-lucide="clock-alert" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Pérdida de foco y eficiencia</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Interrumpir su actividad principal para gestionar
-                        llamadas afecta significativamente la productividad y puede mermar la calidad de su servicio.
-                    </p>
-                </div>
-                <!-- Pain 3 -->
-                <div
-                    class="bg-brand-dark border border-white/5 p-8 rounded-2xl hover:border-red-500/30 transition-colors group">
-                    <div
-                        class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-500/20 transition-colors">
-                        <i data-lucide="ban" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Ineficiencia en la cualificación</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Tiempo valioso invertido en atender a prospectos
-                        que finalmente no se ajustan a su perfil de cliente ideal o requerimientos.</p>
-                </div>
-                <!-- Pain 4 -->
-                <div
-                    class="bg-brand-dark border border-white/5 p-8 rounded-2xl hover:border-red-500/30 transition-colors group">
-                    <div
-                        class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-500/20 transition-colors">
-                        <i data-lucide="moon" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Extensión de la jornada laboral</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Acumulación de tareas administrativas y atención a
-                        consultas fuera del horario comercial, comprometiendo su descanso y conciliación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- La Solución -->
-    <section class="py-24 relative" id="solucion">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Una gestión impecable diseñada para
-                        aumentar tu rentabilidad.</h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                        Nos integramos en tu negocio para garantizar que cada contacto reciba la atención precisa en el
-                        momento exacto, filtrando el volumen bruto para que tú solo veas resultados.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div
-                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo border border-brand-indigo/20">
-                                <span class="font-bold">1</span>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Atención Instantánea</h4>
-                                <p class="text-slate-400">El prospecto siente que tu empresa está esperándole 24/7,
-                                    contestando al primer tono o mensaje.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div
-                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo border border-brand-indigo/20">
-                                <span class="font-bold">2</span>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Gestión y Cualificación Integral</h4>
-                                <p class="text-slate-400">No solo agendamos citas nuevas; nuestro sistema resuelve
-                                    dudas, da información detallada y gestiona cambios o cancelaciones en citas
-                                    existentes de forma natural.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div
-                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo border border-brand-indigo/20">
-                                <span class="font-bold">3</span>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white mb-2">Cierre Automático</h4>
-                                <p class="text-slate-400">Si el prospecto encaja, la cita aparece directamente en tu
-                                    calendario. Solo tienes que revisar tu agenda al empezar el día y trabajar.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-full lg:w-1/2 relative">
-                    <!-- Decoración UI Simulada -->
-                    <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 shadow-2xl relative z-10">
-                        <div class="flex items-center gap-3 mb-6 border-b border-white/5 pb-4">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            <span class="text-xs text-slate-500 font-medium ml-2">Tu Agenda (Actualizado al
-                                segundo)</span>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div
-                                class="bg-brand-dark border border-white/5 p-4 rounded-xl flex items-center justify-between animate-pulse-slow">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-brand-indigo/20 flex items-center justify-center text-brand-indigo">
-                                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white font-semibold text-sm">Nueva Cita Confirmada</h5>
-                                        <p class="text-slate-500 text-xs mt-1">Cliente cualificado - Presupuesto alto
-                                        </p>
-                                    </div>
-                                </div>
-                                <span
-                                    class="text-brand-indigo text-xs font-bold bg-brand-indigo/10 px-2 py-1 rounded">Hoy
-                                    16:30</span>
-                            </div>
-
-                            <div
-                                class="bg-brand-dark border border-white/5 p-4 rounded-xl flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-brand-indigo/10 flex items-center justify-center text-slate-500">
-                                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-slate-300 font-semibold text-sm">Nueva Cita Confirmada</h5>
-                                        <p class="text-slate-500 text-xs mt-1">Revisión general</p>
-                                    </div>
-                                </div>
-                                <span class="text-slate-500 text-xs font-bold bg-white/5 px-2 py-1 rounded">Mañana
-                                    09:00</span>
-                            </div>
-                        </div>
-
-                        <!-- Glow effect -->
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-r from-brand-indigo to-blue-500 rounded-2xl blur-xl opacity-20 -z-10">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Características -->
-    <section class="py-24 bg-slate-900 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center md:text-left">
-                    <div
-                        class="w-14 h-14 bg-brand-indigo/10 rounded-2xl flex items-center justify-center text-brand-indigo mb-6 mx-auto md:mx-0">
-                        <i data-lucide="mic" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Gestión Telefónica Natural</h3>
-                    <p class="text-slate-400 leading-relaxed">Respuestas fluidas y profesionales, entrenadas
-                        específicamente para gestionar a la perfección tu catálogo de servicios, tarifas y normativas de
-                        empresa.</p>
-                </div>
-
-                <div class="text-center md:text-left">
-                    <div
-                        class="w-14 h-14 bg-brand-indigo/10 rounded-2xl flex items-center justify-center text-brand-indigo mb-6 mx-auto md:mx-0">
-                        <i data-lucide="blocks" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Conectado a tu Ecosistema</h3>
-                    <p class="text-slate-400 leading-relaxed">Se integra de forma invisible con las herramientas que ya
-                        usas hoy (Google Calendar, CRM especializado o tu sistema de reservas habitual).</p>
-                </div>
-
-                <div class="text-center md:text-left">
-                    <div
-                        class="w-14 h-14 bg-brand-indigo/10 rounded-2xl flex items-center justify-center text-brand-indigo mb-6 mx-auto md:mx-0">
-                        <i data-lucide="message-square-dashed" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Seguimiento Impecable</h3>
-                    <p class="text-slate-400 leading-relaxed">Mandamos recordatorios automáticos por WhatsApp o Email a
-                        tus clientes para asegurar que se presentan. Las cancelaciones sin previo aviso se reducen
-                        drásticamente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Automatización de Datos y Procesos -->
-    <section class="py-24 relative border-t border-white/5" id="datos">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-                <div class="w-full lg:w-1/2">
-                    <span class="inline-block text-brand-indigo text-sm font-semibold uppercase tracking-wider mb-4">Más allá del teléfono</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ponemos tus datos a trabajar por ti.</h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                        Nos conectamos a tu sistema de gestión (historia clínica, CRM o agenda), leemos tu información y te damos un panel de control siempre al día y avisos automáticos. Así no se te escapa nada importante: revisiones que tocan, resultados pendientes, seguimientos o cualquier dato crítico del día a día de tu clínica.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo border border-brand-indigo/20"><i data-lucide="layout-dashboard" class="w-5 h-5"></i></div>
-                            <div><h4 class="text-xl font-bold text-white mb-2">Panel de control al día</h4><p class="text-slate-400">Todo lo importante de un vistazo, actualizado cada día, con buscador y filtros.</p></div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo border border-brand-indigo/20"><i data-lucide="bell-ring" class="w-5 h-5"></i></div>
-                            <div><h4 class="text-xl font-bold text-white mb-2">Avisos automáticos</h4><p class="text-slate-400">Te llegan solos por correo, sin que tengas que entrar a mirar. El aviso aparece antes de que el plazo se pase.</p></div>
-                        </div>                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="bg-slate-900 border border-white/10 rounded-2xl p-6 shadow-2xl relative z-10">
-                        <div class="flex items-center gap-3 mb-6 border-b border-white/5 pb-4">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            <span class="text-xs text-slate-500 font-medium ml-2">Panel de la clínica (datos de ejemplo)</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-3 mb-5">
-                            <div class="bg-brand-dark border border-white/5 rounded-xl p-3"><p class="text-2xl font-bold text-white">128</p><p class="text-[11px] text-slate-500 mt-1">Pacientes en seguimiento</p></div>
-                            <div class="bg-brand-dark border border-red-500/20 rounded-xl p-3"><p class="text-2xl font-bold text-red-400">6</p><p class="text-[11px] text-slate-500 mt-1">Requieren acción</p></div>
-                            <div class="bg-brand-dark border border-white/5 rounded-xl p-3"><p class="text-2xl font-bold text-white">34</p><p class="text-[11px] text-slate-500 mt-1">Revisiones (semana)</p></div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="bg-brand-dark border border-white/5 p-3 rounded-xl flex items-center justify-between">
-                                <div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-red-500"></div><span class="text-slate-300 text-sm">Resultado pendiente de revisar · Paciente A</span></div>
-                                <span class="text-red-400 text-xs font-bold bg-red-500/10 px-2 py-1 rounded">2 días</span>
-                            </div>
-                            <div class="bg-brand-dark border border-white/5 p-3 rounded-xl flex items-center justify-between">
-                                <div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-yellow-500"></div><span class="text-slate-300 text-sm">Revisión periódica próxima · Paciente B</span></div>
-                                <span class="text-yellow-400 text-xs font-bold bg-yellow-500/10 px-2 py-1 rounded">6 días</span>
-                            </div>
-                            <div class="bg-brand-dark border border-white/5 p-3 rounded-xl flex items-center justify-between">
-                                <div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-slate-500"></div><span class="text-slate-300 text-sm">Seguimiento postoperatorio · Paciente C</span></div>
-                                <span class="text-slate-400 text-xs font-bold bg-white/5 px-2 py-1 rounded">9 días</span>
-                            </div>
-                        </div>
-                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-indigo to-blue-500 rounded-2xl blur-xl opacity-20 -z-10"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo / Llama Ahora -->
-    <section class="py-32 relative overflow-hidden" id="demo">
-        <div
-            class="absolute inset-0 bg-brand-indigo/5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-indigo/10 via-brand-dark to-brand-dark -z-10">
-        </div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Prueba el Sistema en Directo</h2>
-            <p class="text-xl text-slate-400 mb-12 leading-relaxed">
-                Llama a nuestro asistente de prueba para una clínica dental y pide una cita. Comprueba tú mismo cómo
-                atiende, resuelve dudas y agenda en tiempo real.
-            </p>
-
-            <!-- Teléfono Interactivo -->
-            <div
-                class="inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-slate-900 border border-brand-indigo/30 p-8 rounded-3xl shadow-[0_0_50px_-15px_#4F46E5] relative z-20">
-                <div
-                    class="w-16 h-16 rounded-full bg-brand-indigo/10 flex items-center justify-center text-brand-indigo animate-pulse-slow">
-                    <i data-lucide="phone-call" class="w-8 h-8"></i>
-                </div>
-                <div class="text-center sm:text-left">
-                    <p class="text-sm font-medium text-slate-400 mb-1">Número de Demo (Clínica Dental)</p>
-                    <a href="tel:+34854624769"
-                        class="text-3xl sm:text-4xl font-black text-white hover:text-brand-indigo transition-colors tracking-widest">
-                        854 62 47 69</a>
-                </div>
-            </div>
-
-            <p class="mt-8 text-sm text-slate-500 max-w-2xl mx-auto">Esta demo en vivo está configurada a modo de
-                ejemplo para el sector dental. El asistente final se entrenará 100% a medida con los tratamientos,
-                respuestas, reglas y el tono corporativo particular de tu empresa.</p>
-        </div>
-    </section>
-
-    <!-- Proceso -->
-    <section class="py-24 bg-slate-900 border-t border-white/5" id="proceso">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Una implementación rápida que no interrumpe
-                    tu operación diaria.</h2>
-                <p class="text-slate-400 text-lg">Hacemos todo el trabajo pesado para que tú solo veas los resultados en
-                    tu agenda.</p>
-            </div>
-
-            <div class="relative">
-                <!-- Línea conectora Desktop -->
-                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-white/5 -translate-y-1/2"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-                    <!-- Step 1 -->
-                    <div class="bg-brand-dark border border-white/10 p-8 rounded-2xl relative shadow-xl">
-                        <div
-                            class="absolute -top-6 left-8 bg-brand-indigo text-white text-xl font-black w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-brand-indigo/30">
-                            1</div>
-                        <h3 class="text-xl font-bold text-white mb-3 mt-4">Llamada de Viabilidad</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Evaluamos tu negocio en 15 minutos. Si nuestro
-                            sistema no puede ahorrarte tiempo o hacerte ganar dinero de inmediato, te lo comunicaremos
-                            con total transparencia y no procederemos con la implementación.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="bg-brand-dark border border-white/10 p-8 rounded-2xl relative shadow-xl">
-                        <div
-                            class="absolute -top-6 left-8 bg-brand-indigo text-white text-xl font-black w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-brand-indigo/30">
-                            2</div>
-                        <h3 class="text-xl font-bold text-white mb-3 mt-4">Extracción del Conocimiento</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Recopilamos exactamente cómo atiendes tú a los
-                            clientes hoy. Precios, servicios, tiempos, reglas... para que el sistema lo replique a la
-                            perfección mañana.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div
-                        class="bg-brand-dark border border-white/10 p-8 rounded-2xl relative shadow-xl border-t-brand-indigo/50">
-                        <div
-                            class="absolute -top-6 left-8 bg-brand-orange text-white text-xl font-black w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-brand-orange/30">
-                            3</div>
-                        <h3 class="text-xl font-bold text-white mb-3 mt-4">Despliegue y Resultados</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Conectamos el sistema a tu red. Desde el día
-                            uno, tu agenda empieza a gestionarse sola de forma autónoma 24/7. Tú recuperas tu tiempo.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQs -->
-    <section class="py-24" id="faq">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">Preguntas Frecuentes</h2>
-
-            <div class="space-y-4" id="faqAccordion">
-                <!-- FAQ 1 -->
-                <div class="border border-white/10 bg-slate-900 rounded-xl overflow-hidden transition-all duration-200">
-                    <button
-                        class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-white focus:outline-none faq-btn">
-                        <span>Ya tengo a alguien en el equipo que coge el teléfono.</span>
-                        <i data-lucide="chevron-down"
-                            class="w-5 h-5 text-slate-500 transition-transform duration-200 transform"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-slate-400 hidden text-sm leading-relaxed faq-content">
-                        Perfecto. Nuestro sistema no viene a reemplazar, viene a liberar a tu equipo del 80% del trabajo
-                        mecánico repetitivo para que puedan enfocarse en atender a los clientes de alto valor
-                        presencialmente. Nosotros actuamos como un escudo que filtra el volumen bruto.
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="border border-white/10 bg-slate-900 rounded-xl overflow-hidden transition-all duration-200">
-                    <button
-                        class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-white focus:outline-none faq-btn">
-                        <span>¿El sistema contempla transferir llamadas a urgencias u otros departamentos?</span>
-                        <i data-lucide="chevron-down"
-                            class="w-5 h-5 text-slate-500 transition-transform duration-200 transform"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-slate-400 hidden text-sm leading-relaxed faq-content">
-                        Absolutamente. El sistema entiende contextos complejos. Si durante la conversación detecta una
-                        urgencia (por el protocolo que hayamos definido previamente) o el cliente solicita activamente
-                        hablar con un responsable humano, el sistema derivará la llamada en tiempo real al departamento
-                        o número de contacto indicado, manteniendo siempre el nivel de atención profesional que tu
-                        negocio exige.
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="border border-white/10 bg-slate-900 rounded-xl overflow-hidden transition-all duration-200">
-                    <button
-                        class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-white focus:outline-none faq-btn">
-                        <span>¿Esto sirve para mi negocio en concreto?</span>
-                        <i data-lucide="chevron-down"
-                            class="w-5 h-5 text-slate-500 transition-transform duration-200 transform"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-slate-400 hidden text-sm leading-relaxed faq-content">
-                        Nuestro sistema no es genérico. Se alimenta exclusivamente de tus reglas, tu tono de voz, tus
-                        precios y tu modelo de negocio. Por eso primero requerimos agendar una llamada de viabilidad:
-                        para confirmar sin rodeos que tu flujo de trabajo y sector específico es apto y optimizable con
-                        nuestra solución. Si no lo es, te lo decimos.
-                    </div>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="border border-white/10 bg-slate-900 rounded-xl overflow-hidden transition-all duration-200">
-                    <button
-                        class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-white focus:outline-none faq-btn">
-                        <span>¿Cómo gestiona las cancelaciones o cambios de cita?</span>
-                        <i data-lucide="chevron-down"
-                            class="w-5 h-5 text-slate-500 transition-transform duration-200 transform"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-slate-400 hidden text-sm leading-relaxed faq-content">
-                        El asistente de IA reconoce de inmediato si un cliente ya tiene una cita y desea modificarla.
-                        Siguiendo en todo momento tus políticas (por ejemplo, tiempos de aviso previo), el sistema
-                        libera o reprograma el hueco en tu calendario de forma autónoma.
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="border border-white/10 bg-slate-900 rounded-xl overflow-hidden transition-all duration-200">
-                    <button
-                        class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-white focus:outline-none faq-btn">
-                        <span>¿El asistente IA se puede personalizar para mi clínica o gabinete?</span>
-                        <i data-lucide="chevron-down"
-                            class="w-5 h-5 text-slate-500 transition-transform duration-200 transform"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-slate-400 hidden text-sm leading-relaxed faq-content">
-                        Sí, está diseñado especialmente para poder adaptarse a cualquier clínica o centro de servicios.
-                        Entiende tus especialidades y restricciones, proporcionando información detallada a los clientes
-                        sobre las diferentes pruebas o requisitos antes de agendar.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / CTA -->
-    <footer class="bg-black border-t border-white/10 pt-20 pb-10" id="contacto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
-                <!-- CTA Text -->
-                <div>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                        ¿Preparado para recuperar tu tiempo?
-                    </h2>
-                    <p class="text-xl text-slate-400 mb-8 leading-relaxed">
-                        Completa el formulario para reservar tu estudio de viabilidad gratuito. Analizaremos tu caso
-                        durante 15 minutos sin ningún compromiso.
-                    </p>
-
-                    <div class="flex items-center gap-4 text-slate-300">
-                        <div
-                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5">
-                            <i data-lucide="check" class="text-brand-orange w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="font-bold text-white">Respuesta Rápida</p>
-                            <p class="text-sm">Contactamos contigo en menos de 24h laborables.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="bg-slate-900 border border-white/10 rounded-2xl p-8">
-                    <form id="contactForm" action="https://formsubmit.co/admin@italicaia.com" method="POST"
-                        class="space-y-5">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label for="nombre" class="block text-sm font-medium text-slate-400 mb-2">Nombre
-                                    completo *</label>
-                                <input type="text" id="nombre" name="nombre" required
-                                    class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-1 focus:ring-brand-indigo transition-colors"
-                                    placeholder="Tu nombre">
-                            </div>
-                            <div>
-                                <label for="empresa" class="block text-sm font-medium text-slate-400 mb-2">Nombre de la
-                                    Empresa *</label>
-                                <input type="text" id="empresa" name="empresa" required
-                                    class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-1 focus:ring-brand-indigo transition-colors"
-                                    placeholder="Tu negocio">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label for="telefono" class="block text-sm font-medium text-slate-400 mb-2">Teléfono
-                                    *</label>
-                                <input type="tel" id="telefono" name="telefono" required
-                                    class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-1 focus:ring-brand-indigo transition-colors"
-                                    placeholder="+34 600 000 000">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email *</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-1 focus:ring-brand-indigo transition-colors"
-                                    placeholder="tucorreo@empresa.com">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="sector" class="block text-sm font-medium text-slate-400 mb-2">¿A qué se dedica
-                                tu empresa? *</label>
-                            <select id="sector" name="sector" required
-                                class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-1 focus:ring-brand-indigo transition-colors appearance-none">
-                                <option value="" disabled selected>Selecciona una opción...</option>
-                                <option value="inmobiliaria">Agencias Inmobiliarias</option>
-                                <option value="hosteleria">Hostelería y Restauración</option>
-                                <option value="clinica">Clínica / Centro Médico</option>
-                                <option value="automocion">Automoción y Talleres</option>
-                                <option value="otro">Otros</option>
-                            </select>
-                        </div>
-
-                        <div class="flex items-start gap-3 pt-2">
-                            <div class="flex items-center h-5">
-                                <input id="rgpd" type="checkbox" required
-                                    class="w-4 h-4 bg-brand-dark border-white/20 rounded accent-brand-orange">
-                            </div>
-                            <label for="rgpd" class="text-xs text-slate-500">
-                                He leído y acepto la <a href="politica-privacidad.html" class="text-brand-indigo hover:underline" target="_blank">política de
-                                    privacidad</a>.
-                            </label>
-                        </div>
-
-                        <button id="submitBtn" type="submit"
-                            class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 relative overflow-hidden group mt-4">
-                            <span
-                                class="relative z-10 transition-transform group-hover:scale-105 inline-flex items-center gap-2">Agendar
-                                Llamada de Viabilidad Gratis <i data-lucide="calendar" class="w-5 h-5"></i></span>
-                            <div
-                                class="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform ease-out duration-300">
-                            </div>
-                        </button>
-                    </form>
-
-                    <div id="formSuccess"
-                        class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400 text-sm flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
-                        <span>Datos enviados correctamente. Nos pondremos en contacto contigo en breve para agendar la
-                            llamada.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div
-                class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm text-slate-600">
-                <p>&copy; 2024 Italica IA. Todos los derechos reservados.</p>
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="aviso-legal.html" class="hover:text-slate-300 transition-colors">Aviso Legal</a>
-                    <a href="politica-privacidad.html" class="hover:text-slate-300 transition-colors">Privacidad</a>
-                    <a href="politica-cookies.html" class="hover:text-slate-300 transition-colors">Cookies</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="fixed bottom-0 left-0 w-full bg-brand-dark/95 backdrop-blur-md border-t border-white/10 z-[100] transform translate-y-full transition-transform duration-500 flex flex-col md:flex-row items-center justify-between p-4 px-6 md:px-12 gap-4">
-        <div class="text-sm text-slate-400 max-w-4xl">
-            <p>Utilizamos cookies propias y de terceros para garantizar el funcionamiento técnico de la web y analizar de forma anónima el comportamiento de navegación para mejorar nuestro servicio. Puede aceptar o configurar qué cookies permite. <a href="politica-cookies.html" class="text-brand-indigo hover:underline ml-1">Más información</a>.</p>
-        </div>
-        <div class="flex gap-3 flex-shrink-0 w-full md:w-auto mt-2 md:mt-0">
-            <button id="rejectCookies" class="flex-1 md:flex-none px-4 py-2 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors text-sm font-semibold">Rechazar opcionales</button>
-            <button id="acceptCookies" class="flex-1 md:flex-none px-4 py-2 bg-brand-indigo hover:bg-indigo-500 rounded-lg text-white transition-colors text-sm font-semibold shadow-[0_0_15px_-3px_#4F46E5]">Aceptar todas</button>
-        </div>
+<!-- DEMO 01 -->
+<section class="demo-sec" id="pruebalo">
+  <div class="env">
+    <div class="cab">
+      <span class="num-demo">Empieza con · una llamada</span>
+      <h2>Llámalo y <i>compruébalo tú mismo</i>.</h2>
+      <p>La atención telefónica es una de las cosas que automatizamos, y esta es una demostración de cómo funciona. Al otro lado hay un asistente real, montado con las normas de una clínica de ejemplo: coge la llamada, entiende qué necesita quien llama, aplica esas normas y cierra la cita. En tu negocio sería lo mismo, con tus servicios y tus normas.</p>
     </div>
 
-    <!-- Script de Inicialización y Lógica -->
-    <script src="./js/app.js"></script>
-    <script>
-        // Init Lucide Icons
-        lucide.createIcons();
-    </script>
-</body>
+    <div class="telefono">
+      <span class="lab">Llámalo y pídele una cita</span>
+      <a href="tel:+34854624769">854 62 47 69</a>
+      <p class="pie">Contesta a cualquier hora y no hace falta que digas quién eres.</p>
+    </div>
 
+    <p class="puente">
+      Y esto es lo que no se oye por teléfono. A la izquierda, una llamada como la que puedes
+      hacer tú ahora. A la derecha, <b>lo que quedaría hecho en tus sistemas</b> si ese asistente
+      fuera el de tu clínica. La demo del teléfono es solo la conversación: lo de la derecha se
+      monta con tus herramientas.
+    </p>
+
+    <div class="tarj">
+      <div class="tarj-cab">
+        <span>Llamada entrante, con la clínica ya cerrada</span>
+        <span class="reloj">Martes · 20:47</span>
+      </div>
+      <div class="dos">
+        <div class="charla">
+          <div class="turno"><span class="quien">Paciente</span><p class="dice">Buenas, se me ha roto una muela esta tarde comiendo y me duele bastante.</p></div>
+          <div class="turno ia"><span class="quien">Itálica</span><p class="dice">Vaya. ¿Le duele ahora mismo?</p></div>
+          <div class="turno"><span class="quien">Paciente</span><p class="dice">Sí, bastante. No he podido ni cenar.</p></div>
+          <div class="turno ia"><span class="quien">Itálica</span><p class="dice">Vale, entonces le damos prioridad y le busco la cita más cercana. Hoy ya hemos cerrado, pero mañana a las nueve tengo hueco. ¿Le viene bien?</p></div>
+          <div class="turno"><span class="quien">Paciente</span><p class="dice">Sí, perfecto.</p></div>
+          <div class="turno ia"><span class="quien">Itálica</span><p class="dice">Muy bien. ¿Me dice su nombre y un teléfono de contacto?</p></div>
+          <div class="turno"><span class="quien">Paciente</span><p class="dice">Javier Ortega. Seis dos siete, tres uno cuatro, cero nueve dos.</p></div>
+          <div class="turno ia"><span class="quien">Itálica</span><p class="dice">Estupendo, Javier. Le veo de cuando vino a la limpieza, así que ya tengo su historial. Pues mañana a las nueve con el doctor Sanz, y le mando la confirmación por WhatsApp. Venga, que descanse.</p></div>
+        </div>
+        <div class="acc">
+          <div class="acc-cab">En tus sistemas, mientras habla</div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu fichero de pacientes</span><p>Javier Ortega, alta en 2024. Última visita, una limpieza hace dos años.</p></div>
+            <span class="chip lee">Lee</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu agenda</span><p>Huecos reales de mañana. Descarta los de la doctora Peña, que lleva ortodoncia: esto es para el doctor Sanz.</p></div>
+            <span class="chip lee">Lee</span>
+          </div>
+          <div class="acc-fila regla">
+            <div><span class="sis">Tus normas</span><p>Dolor + diente roto = urgencia. Primer hueco disponible, sin preguntar preferencia. Urgencia médica real: al 112, sin cita.</p></div>
+            <span class="chip rg">Decide</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu agenda</span><p>9:00 con el doctor Sanz. <b>Bloqueado</b> mientras hablan, para que nadie lo coja, y <b>confirmado</b> en cuanto acepta.</p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu ficha de paciente</span><p>Motivo en sus palabras: «Se me ha roto una muela comiendo»</p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu WhatsApp</span><p>Confirmación al paciente con día, hora y dirección. Y aviso al doctor Sanz antes de abrir.</p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+        </div>
+      </div>
+      <div class="tarj-pie">Eran las <b>20:47 de un martes</b> y la clínica llevaba veinte minutos cerrada. Al abrir, la cita ya estaba puesta y el doctor sabía por qué. <b>Antes, esa llamada se perdía.</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO 02 -->
+<section class="demo-sec alt">
+  <div class="env">
+    <div class="cab">
+      <span class="num-demo">Empieza con · un WhatsApp</span>
+      <h2>Un pedido que entra por WhatsApp <i>a las once de la noche</i>.</h2>
+      <p>Un mensaje escrito sigue el mismo recorrido que una llamada y acaba en el mismo sitio.</p>
+    </div>
+
+    <div class="tarj">
+      <div class="tarj-cab">
+        <span>WhatsApp entrante</span>
+        <span class="reloj">23:14</span>
+      </div>
+      <div class="dos">
+        <div class="msg">
+          <div class="msg-meta">+34 6·· ··· ··7 · número no guardado</div>
+          <p class="msg-burbuja">Buenas, ponme 20 cajas de langostino cocido 40/60 para el jueves. Misma dirección de siempre.</p>
+          <p class="msg-resp">
+            Confirmado, Manolo. 20 cajas de langostino cocido 40/60 para el jueves, a Bar Peñalver. Total 486,00 € sin IVA. Si necesitas cambiar algo, dímelo hasta el miércoles a mediodía.
+            <span class="m">Respondido a las 23:14 · 11 segundos después</span>
+          </p>
+        </div>
+        <div class="acc">
+          <div class="acc-fila">
+            <div><span class="sis">Cliente</span><p>Identificado por el número: <b>Bar Peñalver</b>, cuenta 4471, reparto martes y jueves.</p></div>
+            <span class="chip ok">Hecho</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Catálogo</span><p>Referencia localizada: langostino cocido 40/60, caja de 2 kg.</p></div>
+            <span class="chip ok">Hecho</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Stock</span><p>Comprobado. Hay 60 cajas. El pedido entra.</p></div>
+            <span class="chip ok">Hecho</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">ERP</span><p>Pedido creado con la dirección habitual y entrega el jueves.</p></div>
+            <span class="chip ok">Hecho</span>
+          </div>
+          <div class="acc-fila regla">
+            <div><span class="sis">Y cuando no cuadra</span><p>Sin stock no se lo inventa: responde con lo que sí hay y te avisa. Con facturas vencidas, el pedido queda retenido y salta al comercial.</p></div>
+            <span class="chip rg">Regla</span>
+          </div>
+        </div>
+      </div>
+      <div class="tarj-pie">Al día siguiente el pedido ya está en el sistema. <b>Nadie lo tecleó.</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO 03 -->
+<section class="demo-sec">
+  <div class="env">
+    <div class="cab">
+      <span class="num-demo">Empieza con · un parte de trabajo</span>
+      <h2>Una foto al terminar y el servicio <i>queda facturado</i>.</h2>
+      <p>El técnico acaba, hace una foto del parte y la manda por WhatsApp. Con eso se cierra el servicio, se calculan las horas y el material con tus tarifas, y la factura sale sola. Nadie tiene que volver a la oficina a teclear nada.</p>
+    </div>
+
+    <div class="tarj">
+      <div class="tarj-cab">
+        <span>WhatsApp del técnico</span>
+        <span class="reloj">18:40</span>
+      </div>
+      <div class="dos">
+        <div class="msg">
+          <div class="msg-meta">Rubén · técnico de zona norte</div>
+          <div class="doc-adj">
+            <span class="ext">FOTO</span>
+            <span>parte_4471.jpg</span>
+          </div>
+          <p class="msg-burbuja">Terminado lo del Residencial El Encinar. Desatascada la bajante del garaje y limpieza de arqueta. Dos horas. He usado dos metros de tubo y una junta.</p>
+          <p class="msg-resp">
+            Recibido, Rubén. Servicio cerrado y factura emitida.
+            <span class="m">Respondido a las 18:41 · 47 segundos después</span>
+          </p>
+        </div>
+        <div class="acc">
+          <div class="acc-cab">En tus sistemas, sin que nadie entre</div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu sistema</span><p>Residencial El Encinar, cliente 3182. Tenía un aviso abierto esta mañana por un atasco en el garaje.</p></div>
+            <span class="chip lee">Lee</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">El parte</span><p>De la foto y del mensaje: 2 horas de mano de obra, 2 metros de tubo y una junta.</p></div>
+            <span class="chip lee">Lee</span>
+          </div>
+          <div class="acc-fila regla">
+            <div><span class="sis">Tus tarifas</span><p>Mano de obra a 45 €/h y material a precio de tarifa. Esta comunidad tiene un 10 % pactado por contrato de mantenimiento, así que se aplica.</p></div>
+            <span class="chip rg">Decide</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu sistema</span><p>Servicio cerrado y enlazado al aviso de esta mañana. Deja de figurar como pendiente.</p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu facturación</span><p>90 € de mano de obra + 30 € de material, menos el 10 %. <b>Factura de 108 € emitida y enviada al cliente.</b></p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+        </div>
+      </div>
+      <div class="tarj-pie">Rubén no ha vuelto a la oficina y nadie ha tecleado nada. <b>La factura salió a las 18:41.</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO 04 -->
+<section class="demo-sec alt">
+  <div class="env">
+    <div class="cab">
+      <span class="num-demo">Empieza · sin que nadie haga nada</span>
+      <h2>Te dice qué tienes pendiente y <i>cuál era el siguiente paso</i>.</h2>
+      <p>Cada presupuesto, cada pedido y cada cliente abierto tiene un siguiente paso y una fecha. El sistema los repasa todos cada noche y por la mañana te dice cuáles se han pasado de fecha. No hay que entrar a mirar, ni acordarse, ni fiarse de que alguien lo lleve al día.</p>
+    </div>
+
+    <div class="tarj">
+      <div class="tarj-cab">
+        <span>Correo de las 8:00</span>
+        <span class="reloj">Lunes 17</span>
+      </div>
+      <div class="dos">
+        <div class="correo">
+          <div class="correo-cab">
+            <p class="asunto">4 asuntos por revisar</p>
+            <span class="de">2 con el siguiente paso ya vencido</span>
+          </div>
+
+          <div class="pdte">
+            <div>
+              <b>Hotel Alameda</b> · presupuesto de 3.400 €
+              <span>Siguiente paso: llamar a Marisa Duarte</span>
+            </div>
+            <span class="sem urg">Venció el jueves</span>
+          </div>
+          <div class="pdte">
+            <div>
+              <b>Pedido 2026-1184</b> · Suministros Peña
+              <span>Siguiente paso: confirmar la fecha de entrega</span>
+            </div>
+            <span class="sem urg">Venció ayer</span>
+          </div>
+          <div class="pdte">
+            <div>
+              <b>Residencial El Encinar</b> · contrato de mantenimiento
+              <span>Siguiente paso: enviar la renovación</span>
+            </div>
+            <span class="sem med">Vence en 18 días</span>
+          </div>
+          <div class="pdte">
+            <div>
+              <b>Talleres Moreno</b> · visita comercial
+              <span>Siguiente paso: pasar la propuesta por escrito</span>
+            </div>
+            <span class="sem med">Vence el viernes</span>
+          </div>
+          <p class="pie-correo">Ordenados por lo que lleva más tiempo parado. Lo que se resuelve desaparece solo de la lista al día siguiente.</p>
+        </div>
+
+        <div class="acc">
+          <div class="acc-cab">Lo que ha pasado durante la noche</div>
+          <div class="acc-fila">
+            <div><span class="sis">Tus sistemas</span><p>Repasa todo lo que sigue abierto y mira la fecha del siguiente paso de cada uno: presupuestos, pedidos, contratos y clientes.</p></div>
+            <span class="chip lee">Lee</span>
+          </div>
+          <div class="acc-fila regla">
+            <div><span class="sis">Tus normas</span><p>Lo que se pasó de fecha va a tu correo. Lo que vence dentro de un mes, avisado con antelación. Lo que ya se hizo sale de la lista sin que nadie lo cierre a mano.</p></div>
+            <span class="chip rg">Decide</span>
+          </div>
+          <div class="acc-fila">
+            <div><span class="sis">Tu correo</span><p>Un solo correo a las ocho, con los 4 asuntos que necesitan algo y el siguiente paso de cada uno escrito.</p></div>
+            <span class="chip ok">Escribe</span>
+          </div>
+        </div>
+      </div>
+      <div class="tarj-pie">Esta mañana solo <b>4 asuntos necesitaban algo</b>. La diferencia con revisarlo a mano no es el tiempo que se tarda: es que <b>a mano se revisa lo que uno recuerda</b>, y aquí se revisa todo lo que hay abierto.</div>
+    </div>
+  </div>
+</section>
+
+<section class="env como" id="como">
+  <div class="cab">
+    <span class="etq">Cómo empezamos</span>
+    <h2>Sin parar tu operación <i>ni un día</i>.</h2>
+  </div>
+  <div class="pasos">
+    <div class="paso">
+      <span class="n">01</span>
+      <h3>Hablamos quince minutos</h3>
+      <p>Te preguntamos por tu proceso real: qué entra, por dónde, quién lo toca y dónde acaba. Si no vemos un ahorro claro de tiempo o de dinero, te lo decimos y no seguimos.</p>
+    </div>
+    <div class="paso">
+      <span class="n">02</span>
+      <h3>Entendemos vuestra forma de trabajar</h3>
+      <p>Precios, servicios, plazos, excepciones, y esas cosas que solo sabe quien lleva años ahí. Es la parte que más te toca a ti, y son un par de sesiones.</p>
+    </div>
+    <div class="paso">
+      <span class="n">03</span>
+      <h3>No entra en producción hasta que lo apruebas</h3>
+      <p>Lo montamos, lo probamos contigo y lo ajustamos las veces que haga falta. No atiende a un cliente real hasta que confirmas que hace exactamente lo que acordamos.</p>
+    </div>
+  </div>
+  <div class="compromiso">
+    <p>Antes de venderte nada miramos tu proceso. Si no vemos ahorro claro, te lo decimos y no seguimos.</p>
+    <p class="firma"><b>Luis Valpuesta</b> · Itálica IA</p>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="preg">
+  <div class="env">
+    <div class="cab">
+      <span class="etq">Preguntas</span>
+      <h2>Lo que nos preguntan <i>en la primera reunión</i>.</h2>
+    </div>
+    <details>
+      <summary>¿Cuánto cuesta?</summary>
+      <p>Hay un pago único de implementación, que depende de lo que haya que montar y de con cuántos sistemas se conecte, y después una cuota mensual. En la llamada de quince minutos te damos un rango ajustado a tu caso, y para eso no tienes que comprometerte a nada.</p>
+    </details>
+    <details>
+      <summary>¿Se conecta con el programa que ya usamos?</summary>
+      <p>Casi siempre. Trabajamos sobre lo que ya tenéis: el programa de gestión, la agenda, el CRM o el ERP. Si tiene forma de conectarse, nos conectamos. Y si no la tiene, lo comprobamos antes de que te comprometas a nada, no después de empezar.</p>
+    </details>
+    <details>
+      <summary>¿Los datos salen de nuestra empresa?</summary>
+      <p>No tienen por qué. El sistema puede funcionar dentro de vuestros propios servidores, y entonces la información no sale de la empresa en ningún momento. Lo hacemos así siempre que el cliente lo prefiere o el tipo de dato lo aconseja.</p>
+    </details>
+    <details>
+      <summary>¿Tiene que coger todas las llamadas?</summary>
+      <p>No, eso lo decidís vosotros. Puede atender solo lo que hoy se os escapa —cuando está comunicando, fuera de horario o después de unos tonos sin que nadie lo coja— o atender siempre. Lo habitual al empezar es dejarlo solo para lo que ahora se pierde, y ampliarlo más adelante si os convence.</p>
+    </details>
+    <details>
+      <summary>¿Y si más adelante queremos cambiar cosas?</summary>
+      <p>Se cambian. Los precios, los horarios, los plazos, qué se considera urgente o quién se encarga de cada cosa son normas vuestras, y se ajustan cuando hagan falta. No hay que rehacer nada ni volver a empezar.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto se tarda en ponerlo en marcha?</summary>
+      <p>Depende del proyecto. Hay automatizaciones funcionando en unos días y otras, con más integraciones de por medio, que llevan algunas semanas. En la primera llamada te decimos en qué franja está lo tuyo. La mayor parte de ese tiempo no os ocupa a vosotros: lo único que depende de vuestra agenda es la sesión en la que nos contáis cómo trabajáis.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre" id="cierre">
+  <div class="env">
+    <span class="etq">Siguiente paso</span>
+    <h2>Quince minutos y te decimos si <i>te compensa</i>.</h2>
+    <p>Miramos tu proceso real. Si no vemos un ahorro claro de tiempo o de dinero, te lo decimos y no seguimos. Y si lo vemos, sales de la llamada sabiendo qué se puede automatizar, cuánto costaría y en cuánto tiempo estaría funcionando.</p>
+    <a href="#formulario" class="btn">Reservar la llamada</a>
+    <p class="pie-cta">Por videollamada o por teléfono, como prefieras.</p>
+  </div>
+</section>
+
+
+<section class="form-sec" id="formulario">
+  <div class="env">
+    <div class="cab" style="text-align:center">
+      <span class="etq">Reservar la llamada</span>
+      <h2 style="margin-left:auto;margin-right:auto">Cuéntanos qué <i>queréis automatizar</i>.</h2>
+      <p style="margin-left:auto;margin-right:auto">Nos sirve para preparar la llamada y no gastarla en preguntas básicas. Te escribimos para acordar el día y la hora.</p>
+    </div>
+
+    <form class="formulario" action="https://formsubmit.co/admin@italicaia.com" method="POST">
+      <input type="hidden" name="_subject" value="Nueva solicitud de llamada desde italicaia.com">
+      <input type="hidden" name="_next" value="https://italicaia.com/gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="tapadera" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="dos-campos">
+        <div class="campo">
+          <label for="nombre">Nombre y apellidos</label>
+          <input type="text" id="nombre" name="Nombre" required autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="Empresa" required autocomplete="organization">
+        </div>
+      </div>
+
+      <div class="dos-campos">
+        <div class="campo">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="Correo" required autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="Teléfono" required autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="que">¿Qué os gustaría automatizar?</label>
+        <textarea id="que" name="Qué quiere automatizar"
+          placeholder="No hace falta que lo tengáis definido. Con un par de frases sobre qué os ocupa más tiempo es suficiente."></textarea>
+      </div>
+
+      <label class="rgpd">
+        <input type="checkbox" required>
+        <span>He leído y acepto la <a href="politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+      </label>
+
+      <button type="submit" class="btn-enviar">Solicitar la llamada</button>
+    </form>
+  </div>
+</section>
+
+<div class="env">
+  <div class="pie">
+    <span>© 2026 Itálica IA · Madrid</span>
+    <span><a href="aviso-legal.html">Aviso legal</a> · <a href="politica-privacidad.html">Privacidad</a> · <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</div>
+
+<div class="cookies" id="cookies">
+  <div class="env cookies-int">
+    <p>Esta web no usa analítica ni cookies de terceros. Solo guarda una entrada técnica en tu navegador para recordar esta elección y no volver a preguntarte. <a href="politica-cookies.html">Más información</a>.</p>
+    <div class="cookies-btns">
+      <button class="ck no" id="ckNo">Rechazar</button>
+      <button class="ck si" id="ckSi">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var b = document.getElementById('cookies');
+  var guardar = function (v) {
+    try { localStorage.setItem('cookieConsent', v); } catch (e) {}
+    b.classList.remove('visible');
+  };
+  var previo = null;
+  try { previo = localStorage.getItem('cookieConsent'); } catch (e) {}
+  if (!previo) { setTimeout(function () { b.classList.add('visible'); }, 700); }
+  document.getElementById('ckSi').addEventListener('click', function () { guardar('accepted'); });
+  document.getElementById('ckNo').addEventListener('click', function () { guardar('rejected'); });
+})();
+</script>
+
+</body>
 </html>

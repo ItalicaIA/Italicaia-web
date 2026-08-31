@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias | Itálica IA</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --arena:#EDE6D7; --arena-alta:#F5F0E4; --espresso:#1C1611;
+    --linea:#D3C9B4; --gris:#5D5449; --acento:#6B6134; --granate:#750C1D;
+    --display:"Instrument Serif",Georgia,serif;
+    --texto:"Karla",-apple-system,Segoe UI,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--arena);color:var(--espresso);font-family:var(--texto);
+       font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased;
+       min-height:100vh;display:flex;flex-direction:column}
+  .env{max-width:1340px;margin:0 auto;padding:0 44px;width:100%}
+  @media(max-width:720px){.env{padding:0 22px}}
+  .barra{border-bottom:1px solid var(--linea)}
+  .barra-int{display:flex;align-items:center;height:86px}
+  .marca{font-family:var(--display);font-size:27px;text-decoration:none;color:var(--espresso)}
+  .marca i{color:var(--granate);font-style:normal}
+  main{flex:1;display:flex;align-items:center;padding:80px 0}
+  .caja{max-width:56ch}
+  .etq{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+       color:var(--acento);display:block;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,5.6vw,66px);
+     line-height:1.07;letter-spacing:-.02em;margin:0 0 24px;max-width:18ch}
+  h1 i{color:var(--acento)}
+  p{color:var(--gris);font-size:18.5px;margin:0 0 18px;max-width:56ch}
+  .btn{display:inline-block;margin-top:16px;background:var(--espresso);color:var(--arena-alta);
+       padding:16px 32px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:600}
+  .btn:hover{background:var(--acento)}
+  .pie{border-top:1px solid var(--linea);padding:26px 0;display:flex;
+       justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gris)}
+  .pie a{color:var(--gris);text-decoration:none}
+  .pie a:hover{color:var(--espresso);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="env barra-int">
+    <a class="marca" href="/">Itálica <i>IA</i></a>
+  </div>
+</header>
+
+<main>
+  <div class="env">
+    <div class="caja">
+      <span class="etq">Recibido</span>
+      <h1>Gracias. Te escribimos <i>en menos de un día</i>.</h1>
+      <p>Nos ha llegado tu solicitud. Le echamos un vistazo a lo que nos has contado y te escribimos para cuadrar los quince minutos.</p>
+      <p>Si prefieres adelantarlo, escríbenos directamente a <a href="mailto:admin@italicaia.com" style="color:var(--acento)">admin@italicaia.com</a>.</p>
+      <a class="btn" href="/">Volver a la página</a>
+    </div>
+  </div>
+</main>
+
+<div class="env">
+  <div class="pie">
+    <span>© 2026 Itálica IA · Madrid</span>
+    <span><a href="aviso-legal.html">Aviso legal</a> · <a href="politica-privacidad.html">Privacidad</a> · <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</div>
+
+</body>
+</html>

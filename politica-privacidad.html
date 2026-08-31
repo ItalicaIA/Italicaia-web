@@ -1,96 +1,161 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Itálica IA</title>
-    <meta name="robots" content="noindex, follow">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#020617',
-                            indigo: '#4F46E5',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politica de privacidad | Italica IA</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --arena:#EDE6D7; --arena-alta:#F5F0E4; --espresso:#1C1611;
+    --linea:#D3C9B4; --linea-sut:#E0D8C6; --gris:#5D5449;
+    --acento:#6B6134; --granate:#750C1D;
+    --display:"Instrument Serif",Georgia,serif;
+    --texto:"Karla",-apple-system,Segoe UI,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--arena);color:var(--espresso);font-family:var(--texto);
+       font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+       min-height:100vh;display:flex;flex-direction:column}
+  .env{max-width:1340px;margin:0 auto;padding:0 44px;width:100%}
+  @media(max-width:720px){.env{padding:0 22px}}
+  .barra{border-bottom:1px solid var(--linea-sut)}
+  .barra-int{display:flex;align-items:center;justify-content:space-between;height:86px;gap:20px}
+  .marca{font-family:var(--display);font-size:27px;text-decoration:none;color:var(--espresso)}
+  .marca i{color:var(--granate);font-style:normal}
+  .volver{color:var(--gris);text-decoration:none;font-size:14.5px;font-weight:500}
+  .volver:hover{color:var(--espresso)}
+  main{flex:1;padding:64px 0 88px}
+  .doc{max-width:74ch}
+  .etq{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+       color:var(--acento);display:block;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,58px);
+     line-height:1.08;letter-spacing:-.018em;margin:0 0 28px}
+  h2{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.25;
+     margin:44px 0 14px;padding-top:26px;border-top:1px solid var(--linea-sut)}
+  p{margin:0 0 16px;color:var(--gris)}
+  strong{color:var(--espresso);font-weight:600}
+  ul{margin:0 0 16px;padding-left:22px;color:var(--gris)}
+  li{margin-bottom:9px}
+  a{color:var(--acento)}
+  .ficha{background:var(--arena-alta);border:1px solid var(--linea-sut);border-radius:5px;
+         padding:18px 24px;margin:0 0 18px}
+  .ficha .fila{display:grid;grid-template-columns:210px 1fr;gap:10px;padding:9px 0;
+               border-bottom:1px solid var(--linea-sut);font-size:16px}
+  .ficha .fila:last-child{border-bottom:none}
+  .ficha .k{color:var(--gris);font-weight:500}
+  .ficha .v{color:var(--espresso)}
+  @media(max-width:600px){.ficha .fila{grid-template-columns:1fr;gap:2px}}
+  .nota{border-left:3px solid var(--acento);padding:4px 0 4px 18px;margin:24px 0;font-size:16px}
+  .nota p{margin:0}
+  .actualizado{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea-sut);
+               font-size:14px;color:var(--gris)}
+  .pie{border-top:1px solid var(--linea-sut);padding:26px 0;display:flex;
+       justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gris)}
+  .pie a{color:var(--gris);text-decoration:none}
+  .pie a:hover{color:var(--espresso);text-decoration:underline}
+</style>
 </head>
-<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-indigo selection:text-white">
+<body>
 
-    <!-- Navigation -->
-    <header class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center text-white hover:text-brand-indigo transition-colors gap-2 font-semibold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-                    Volver al Inicio
-                </a>
-            </div>
-        </div>
-    </header>
+<header class="barra">
+  <div class="env barra-int">
+    <a class="marca" href="/">It&aacute;lica <i>IA</i></a>
+    <a class="volver" href="/">Volver a la p&aacute;gina</a>
+  </div>
+</header>
 
-    <main class="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-white mb-8">Política de Privacidad</h1>
-        
-        <div class="prose prose-invert prose-slate max-w-none text-slate-400 space-y-6">
-            <p>En Itálica IA nos tomamos muy en serio la privacidad de tus datos. En cumplimiento con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos de cómo tratamos los datos personales que nos facilitas.</p>
+<main>
+  <div class="env">
+    <div class="doc">
+      <span class="etq">Protecci&oacute;n de datos</span>
+      <h1>Pol&iacute;tica de privacidad</h1>
+      <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la Ley Org&aacute;nica 3/2018 (LOPDGDD),
+      a continuaci&oacute;n se explica c&oacute;mo se tratan los datos personales facilitados a trav&eacute;s de este sitio.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">1. Responsable del Tratamiento</h2>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Identidad:</strong> Luis Alfonso Valpuesta Gonzalez-Cordero</li>
-                <li><strong>NIF/CIF:</strong> 77845834B</li>
-                <li><strong>Dirección:</strong> Fernando el católico 42, 3a, Madrid</li>
-                <li><strong>Email:</strong> admin@italicaia.com</li>
-            </ul>
+      <h2>Responsable del tratamiento</h2>
+      <div class="ficha">
+        <div class="fila"><span class="k">Titular</span><span class="v">Luis Alfonso Valpuesta Gonz&aacute;lez-Cordero</span></div>
+        <div class="fila"><span class="k">NIF</span><span class="v">77845834B</span></div>
+        <div class="fila"><span class="k">Domicilio</span><span class="v">Calle Fernando el Cat&oacute;lico 42, 3&ordm;, Madrid</span></div>
+        <div class="fila"><span class="k">Correo electr&oacute;nico</span><span class="v"><a href="mailto:admin@italicaia.com">admin@italicaia.com</a></span></div>
+        <div class="fila"><span class="k">Sitio web</span><span class="v">italicaia.com</span></div>
+      </div>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">2. Finalidad del Tratamiento</h2>
-            <p>Los datos que nos envías a través del formulario de contacto (Nombre, Empresa, Teléfono, Correo, Sector) se utilizan exclusivamente para:</p>
-            <ul class="list-disc pl-6 space-y-2">
-                <li>Poder ponernos en contacto contigo y agendar la "Llamada de Viabilidad".</li>
-                <li>Atender cualquier otra solicitud o consulta que nos hagas llegar.</li>
-            </ul>
-            <p>Los datos aportados no se utilizarán para enviar spam, publicidad masiva o boletines comerciales no solicitados.</p>
+      <h2>Qu&eacute; datos se recogen</h2>
+      <p>&Uacute;nicamente los que se facilitan de forma voluntaria en el formulario de contacto:
+      <strong>nombre y apellidos, empresa, correo electr&oacute;nico y tel&eacute;fono</strong>, y, si se rellena,
+      la descripci&oacute;n de lo que se desea automatizar. No se recogen datos de categor&iacute;as especiales
+      ni se obtienen datos de terceras fuentes.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">3. Legitimación</h2>
-            <p>La base legal para el tratamiento de tus datos es el <strong>consentimiento expreso</strong> que otorgas al marcar la casilla de aceptación de esta política antes de enviar el formulario.</p>
+      <h2>Para qu&eacute; se usan</h2>
+      <ul>
+        <li>Ponerse en contacto y acordar la llamada solicitada.</li>
+        <li>Atender consultas y preparar, en su caso, una propuesta de servicios.</li>
+      </ul>
+      <p>Los datos no se utilizan para env&iacute;os comerciales masivos ni para boletines no solicitados.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">4. Destinatarios</h2>
-            <p>Tus datos son completamente confidenciales y no serán cedidos a terceros, salvo obligación legal.</p>
-            <p>Para la gestión del envío de los emails desde la página web, utilizamos el servicio de FormSubmit, que actúa únicamente como procesador de envíos hacia nuestra bandeja de entrada.</p>
+      <h2>Base legal</h2>
+      <p>La base que legitima el tratamiento es el <strong>consentimiento</strong> que se otorga al
+      marcar la casilla de aceptaci&oacute;n antes de enviar el formulario. Ese consentimiento
+      <strong>puede retirarse en cualquier momento</strong> escribiendo a
+      <a href="mailto:admin@italicaia.com">admin@italicaia.com</a>, sin que ello afecte a la licitud
+      del tratamiento realizado con anterioridad.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">5. Derechos del Usuario (ARCO)</h2>
-            <p>Como usuario titular de los datos, tienes derecho a:</p>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Acceder</strong> a los datos personales que tenemos tuyos.</li>
-                <li><strong>Rectificar</strong> los datos inexactos o incompletos.</li>
-                <li><strong>Suprimir</strong> tus datos cuando, entre otros motivos, ya no sean necesarios para los fines que fueron recogidos.</li>
-                <li><strong>Oponerte</strong> al tratamiento de los mismos.</li>
-                <li>Solicitar la <strong>limitación</strong> del tratamiento de tus datos en determinadas circunstancias.</li>
-            </ul>
-            <p>Puedes ejercer cualquiera de estos derechos enviando un correo electrónico a <strong>admin@italicaia.com</strong> identificándote adecuadamente.</p>
-        </div>
-    </main>
+      <h2>Cu&aacute;nto tiempo se conservan</h2>
+      <p>Los datos se conservan mientras se mantenga el inter&eacute;s en el servicio o la relaci&oacute;n
+      comercial y, como m&aacute;ximo, <strong>dos a&ntilde;os desde el &uacute;ltimo contacto</strong>, salvo que exista
+      una obligaci&oacute;n legal que exija conservarlos durante m&aacute;s tiempo. Transcurrido ese plazo se
+      suprimen.</p>
 
-    <!-- Footer Simple -->
-    <footer class="bg-black border-t border-white/10 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-600">
-            <p>&copy; 2024 Itálica IA. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      <h2>A qui&eacute;n se comunican</h2>
+      <p>Los datos no se ceden a terceros salvo obligaci&oacute;n legal. Para el env&iacute;o del formulario se
+      utiliza el servicio <strong>FormSubmit</strong>, que act&uacute;a como encargado del tratamiento y se
+      limita a hacer llegar el mensaje al buz&oacute;n del responsable.</p>
+
+      <div class="nota">
+        <p><strong>Transferencias internacionales.</strong> FormSubmit opera con infraestructura
+        situada fuera del Espacio Econ&oacute;mico Europeo, en Estados Unidos. Al enviar el formulario, los
+        datos pasan por sus servidores. Si prefieres evitarlo, puedes escribir directamente a
+        <a href="mailto:admin@italicaia.com">admin@italicaia.com</a> en lugar de usar el formulario.</p>
+      </div>
+
+      <h2>Qu&eacute; derechos tienes</h2>
+      <ul>
+        <li><strong>Acceso:</strong> saber qu&eacute; datos tuyos se est&aacute;n tratando.</li>
+        <li><strong>Rectificaci&oacute;n:</strong> corregir los que sean inexactos o incompletos.</li>
+        <li><strong>Supresi&oacute;n:</strong> pedir que se borren cuando ya no sean necesarios.</li>
+        <li><strong>Oposici&oacute;n:</strong> oponerte al tratamiento.</li>
+        <li><strong>Limitaci&oacute;n:</strong> pedir que se restrinja el tratamiento en determinados casos.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso com&uacute;n.</li>
+      </ul>
+      <p>Para ejercer cualquiera de ellos basta con escribir a
+      <a href="mailto:admin@italicaia.com">admin@italicaia.com</a> acreditando tu identidad.</p>
+
+      <h2>Reclamaciones</h2>
+      <p>Si consideras que el tratamiento de tus datos no se ajusta a la normativa, tienes derecho a
+      presentar una reclamaci&oacute;n ante la <strong>Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos</strong>
+      (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+      <h2>Seguridad</h2>
+      <p>Se aplican las medidas t&eacute;cnicas y organizativas razonables para proteger los datos frente a
+      p&eacute;rdida, uso indebido o acceso no autorizado.</p>
+
+      <p class="actualizado">&Uacute;ltima actualizaci&oacute;n: 31 de agosto de 2026.</p>
+    </div>
+  </div>
+</main>
+
+<div class="env">
+  <div class="pie">
+    <span>&copy; 2026 It&aacute;lica IA &middot; Madrid</span>
+    <span><a href="aviso-legal.html">Aviso legal</a> &middot; <a href="politica-privacidad.html">Privacidad</a> &middot; <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</div>
+
 </body>
 </html>

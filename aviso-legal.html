@@ -1,85 +1,136 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso Legal | Itálica IA</title>
-    <meta name="robots" content="noindex, follow">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#020617',
-                            indigo: '#4F46E5',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso legal | Italica IA</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --arena:#EDE6D7; --arena-alta:#F5F0E4; --espresso:#1C1611;
+    --linea:#D3C9B4; --linea-sut:#E0D8C6; --gris:#5D5449;
+    --acento:#6B6134; --granate:#750C1D;
+    --display:"Instrument Serif",Georgia,serif;
+    --texto:"Karla",-apple-system,Segoe UI,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--arena);color:var(--espresso);font-family:var(--texto);
+       font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+       min-height:100vh;display:flex;flex-direction:column}
+  .env{max-width:1340px;margin:0 auto;padding:0 44px;width:100%}
+  @media(max-width:720px){.env{padding:0 22px}}
+  .barra{border-bottom:1px solid var(--linea-sut)}
+  .barra-int{display:flex;align-items:center;justify-content:space-between;height:86px;gap:20px}
+  .marca{font-family:var(--display);font-size:27px;text-decoration:none;color:var(--espresso)}
+  .marca i{color:var(--granate);font-style:normal}
+  .volver{color:var(--gris);text-decoration:none;font-size:14.5px;font-weight:500}
+  .volver:hover{color:var(--espresso)}
+  main{flex:1;padding:64px 0 88px}
+  .doc{max-width:74ch}
+  .etq{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+       color:var(--acento);display:block;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,58px);
+     line-height:1.08;letter-spacing:-.018em;margin:0 0 28px}
+  h2{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.25;
+     margin:44px 0 14px;padding-top:26px;border-top:1px solid var(--linea-sut)}
+  p{margin:0 0 16px;color:var(--gris)}
+  strong{color:var(--espresso);font-weight:600}
+  ul{margin:0 0 16px;padding-left:22px;color:var(--gris)}
+  li{margin-bottom:9px}
+  a{color:var(--acento)}
+  .ficha{background:var(--arena-alta);border:1px solid var(--linea-sut);border-radius:5px;
+         padding:18px 24px;margin:0 0 18px}
+  .ficha .fila{display:grid;grid-template-columns:210px 1fr;gap:10px;padding:9px 0;
+               border-bottom:1px solid var(--linea-sut);font-size:16px}
+  .ficha .fila:last-child{border-bottom:none}
+  .ficha .k{color:var(--gris);font-weight:500}
+  .ficha .v{color:var(--espresso)}
+  @media(max-width:600px){.ficha .fila{grid-template-columns:1fr;gap:2px}}
+  .nota{border-left:3px solid var(--acento);padding:4px 0 4px 18px;margin:24px 0;font-size:16px}
+  .nota p{margin:0}
+  .actualizado{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea-sut);
+               font-size:14px;color:var(--gris)}
+  .pie{border-top:1px solid var(--linea-sut);padding:26px 0;display:flex;
+       justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gris)}
+  .pie a{color:var(--gris);text-decoration:none}
+  .pie a:hover{color:var(--espresso);text-decoration:underline}
+</style>
 </head>
-<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-indigo selection:text-white">
+<body>
 
-    <!-- Navigation Simple -->
-    <header class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center text-white hover:text-brand-indigo transition-colors gap-2 font-semibold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-                    Volver al Inicio
-                </a>
-            </div>
-        </div>
-    </header>
+<header class="barra">
+  <div class="env barra-int">
+    <a class="marca" href="/">It&aacute;lica <i>IA</i></a>
+    <a class="volver" href="/">Volver a la p&aacute;gina</a>
+  </div>
+</header>
 
-    <main class="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-white mb-8">Aviso Legal</h1>
-        
-        <div class="prose prose-invert prose-slate max-w-none text-slate-400 space-y-6">
-            <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), a continuación se hacen constar los siguientes datos:</p>
-            
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">1. Datos Identificativos</h2>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Titular:</strong> Luis Alfonso Valpuesta Gonzalez-Cordero</li>
-                <li><strong>NIF/CIF:</strong> 77845834B</li>
-                <li><strong>Domicilio fiscal:</strong> Fernando el católico 42, 3a, Madrid</li>
-                <li><strong>Correo electrónico:</strong> <a href="mailto:admin@italicaia.com" class="text-brand-indigo hover:underline">admin@italicaia.com</a></li>
-            </ul>
+<main>
+  <div class="env">
+    <div class="doc">
+      <span class="etq">Informaci&oacute;n legal</span>
+      <h1>Aviso legal</h1>
+      <p>En cumplimiento del deber de informaci&oacute;n recogido en el art&iacute;culo 10 de la Ley 34/2002,
+      de 11 de julio, de Servicios de la Sociedad de la Informaci&oacute;n y del Comercio Electr&oacute;nico,
+      se hacen constar los siguientes datos.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">2. Usuarios</h2>
-            <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+      <h2>Datos identificativos</h2>
+      <div class="ficha">
+        <div class="fila"><span class="k">Titular</span><span class="v">Luis Alfonso Valpuesta Gonz&aacute;lez-Cordero</span></div>
+        <div class="fila"><span class="k">NIF</span><span class="v">77845834B</span></div>
+        <div class="fila"><span class="k">Domicilio</span><span class="v">Calle Fernando el Cat&oacute;lico 42, 3&ordm;, Madrid</span></div>
+        <div class="fila"><span class="k">Correo electr&oacute;nico</span><span class="v"><a href="mailto:admin@italicaia.com">admin@italicaia.com</a></span></div>
+        <div class="fila"><span class="k">Sitio web</span><span class="v">italicaia.com</span></div>
+      </div>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">3. Uso del Portal</h2>
-            <p>La web Itálica IA proporciona el acceso a multitud de informaciones, servicios o datos en Internet pertenecientes a Luis Alfonso Valpuesta Gonzalez-Cordero a los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del uso del portal.</p>
-            
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">4. Propiedad Intelectual e Industrial</h2>
-            <p>Luis Alfonso Valpuesta Gonzalez-Cordero por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a título enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, etc.).</p>
+      <h2>Usuarios</h2>
+      <p>El acceso o uso de este sitio atribuye la condici&oacute;n de usuario, que acepta desde ese momento
+      las condiciones de uso recogidas en este aviso legal.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">5. Exclusión de Garantías y Responsabilidad</h2>
-            <p>Luis Alfonso Valpuesta Gonzalez-Cordero no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos.</p>
+      <h2>Uso del sitio</h2>
+      <p>Este sitio ofrece informaci&oacute;n sobre los servicios de It&aacute;lica IA. El usuario asume la
+      responsabilidad del uso que haga de &eacute;l. Queda prohibido cualquier uso con fines il&iacute;citos o que
+      pueda da&ntilde;ar el sitio, impedir su normal funcionamiento o perjudicar a terceros.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">6. Modificaciones</h2>
-            <p>Luis Alfonso Valpuesta Gonzalez-Cordero se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados.</p>
-        </div>
-    </main>
+      <h2>Propiedad intelectual e industrial</h2>
+      <p>El titular es propietario de todos los derechos de propiedad intelectual e industrial de este
+      sitio y de los elementos contenidos en &eacute;l: textos, im&aacute;genes, dise&ntilde;o, estructura, marcas y
+      logotipos. Queda prohibida su reproducci&oacute;n, distribuci&oacute;n o transformaci&oacute;n sin autorizaci&oacute;n
+      expresa del titular.</p>
 
-    <!-- Footer Simple -->
-    <footer class="bg-black border-t border-white/10 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-600">
-            <p>&copy; 2024 Itálica IA. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      <h2>Exclusi&oacute;n de responsabilidad</h2>
+      <p>El titular no se hace responsable de los da&ntilde;os que pudieran derivarse de errores u omisiones
+      en los contenidos, de la falta de disponibilidad del sitio o de la transmisi&oacute;n de programas
+      maliciosos, siempre que haya actuado con la diligencia debida.</p>
+
+      <h2>Enlaces a otros sitios</h2>
+      <p>Si este sitio incluyera enlaces a p&aacute;ginas de terceros, el titular no ejerce control alguno
+      sobre ellas ni responde de sus contenidos.</p>
+
+      <h2>Modificaciones</h2>
+      <p>El titular se reserva el derecho a modificar sin previo aviso los contenidos y servicios del
+      sitio, as&iacute; como la forma en que se presentan.</p>
+
+      <h2>Legislaci&oacute;n aplicable</h2>
+      <p>Este aviso legal se rige por la legislaci&oacute;n espa&ntilde;ola. Para la resoluci&oacute;n de cualquier
+      controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a
+      derecho, siendo los del domicilio del usuario cuando este tenga la condici&oacute;n de consumidor.</p>
+
+      <p class="actualizado">&Uacute;ltima actualizaci&oacute;n: 31 de agosto de 2026.</p>
+    </div>
+  </div>
+</main>
+
+<div class="env">
+  <div class="pie">
+    <span>&copy; 2026 It&aacute;lica IA &middot; Madrid</span>
+    <span><a href="aviso-legal.html">Aviso legal</a> &middot; <a href="politica-privacidad.html">Privacidad</a> &middot; <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</div>
+
 </body>
 </html>

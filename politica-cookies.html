@@ -1,80 +1,135 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Cookies | Itálica IA</title>
-    <meta name="robots" content="noindex, follow">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#020617',
-                            indigo: '#4F46E5',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politica de cookies | Italica IA</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --arena:#EDE6D7; --arena-alta:#F5F0E4; --espresso:#1C1611;
+    --linea:#D3C9B4; --linea-sut:#E0D8C6; --gris:#5D5449;
+    --acento:#6B6134; --granate:#750C1D;
+    --display:"Instrument Serif",Georgia,serif;
+    --texto:"Karla",-apple-system,Segoe UI,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--arena);color:var(--espresso);font-family:var(--texto);
+       font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+       min-height:100vh;display:flex;flex-direction:column}
+  .env{max-width:1340px;margin:0 auto;padding:0 44px;width:100%}
+  @media(max-width:720px){.env{padding:0 22px}}
+  .barra{border-bottom:1px solid var(--linea-sut)}
+  .barra-int{display:flex;align-items:center;justify-content:space-between;height:86px;gap:20px}
+  .marca{font-family:var(--display);font-size:27px;text-decoration:none;color:var(--espresso)}
+  .marca i{color:var(--granate);font-style:normal}
+  .volver{color:var(--gris);text-decoration:none;font-size:14.5px;font-weight:500}
+  .volver:hover{color:var(--espresso)}
+  main{flex:1;padding:64px 0 88px}
+  .doc{max-width:74ch}
+  .etq{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+       color:var(--acento);display:block;margin-bottom:16px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,58px);
+     line-height:1.08;letter-spacing:-.018em;margin:0 0 28px}
+  h2{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.25;
+     margin:44px 0 14px;padding-top:26px;border-top:1px solid var(--linea-sut)}
+  p{margin:0 0 16px;color:var(--gris)}
+  strong{color:var(--espresso);font-weight:600}
+  ul{margin:0 0 16px;padding-left:22px;color:var(--gris)}
+  li{margin-bottom:9px}
+  a{color:var(--acento)}
+  .ficha{background:var(--arena-alta);border:1px solid var(--linea-sut);border-radius:5px;
+         padding:18px 24px;margin:0 0 18px}
+  .ficha .fila{display:grid;grid-template-columns:210px 1fr;gap:10px;padding:9px 0;
+               border-bottom:1px solid var(--linea-sut);font-size:16px}
+  .ficha .fila:last-child{border-bottom:none}
+  .ficha .k{color:var(--gris);font-weight:500}
+  .ficha .v{color:var(--espresso)}
+  @media(max-width:600px){.ficha .fila{grid-template-columns:1fr;gap:2px}}
+  .nota{border-left:3px solid var(--acento);padding:4px 0 4px 18px;margin:24px 0;font-size:16px}
+  .nota p{margin:0}
+  .actualizado{margin-top:44px;padding-top:20px;border-top:1px solid var(--linea-sut);
+               font-size:14px;color:var(--gris)}
+  .pie{border-top:1px solid var(--linea-sut);padding:26px 0;display:flex;
+       justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--gris)}
+  .pie a{color:var(--gris);text-decoration:none}
+  .pie a:hover{color:var(--espresso);text-decoration:underline}
+</style>
 </head>
-<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-indigo selection:text-white">
+<body>
 
-    <header class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center text-white hover:text-brand-indigo transition-colors gap-2 font-semibold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-                    Volver al Inicio
-                </a>
-            </div>
-        </div>
-    </header>
+<header class="barra">
+  <div class="env barra-int">
+    <a class="marca" href="/">It&aacute;lica <i>IA</i></a>
+    <a class="volver" href="/">Volver a la p&aacute;gina</a>
+  </div>
+</header>
 
-    <main class="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl font-bold text-white mb-8">Política de Cookies</h1>
-        
-        <div class="prose prose-invert prose-slate max-w-none text-slate-400 space-y-6">
-            <p>En Itálica IA utilizamos cookies u otras tecnologías de almacenamiento similares (en adelante, "cookies") para poder ofrecerte un mejor servicio y brindarte una mejor experiencia de navegación.</p>
+<main>
+  <div class="env">
+    <div class="doc">
+      <span class="etq">Cookies</span>
+      <h1>Pol&iacute;tica de cookies</h1>
+      <p>Esta p&aacute;gina utiliza el m&iacute;nimo almacenamiento posible en tu navegador. A continuaci&oacute;n se
+      explica exactamente qu&eacute; guarda y para qu&eacute;.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">¿Qué es una cookie?</h2>
-            <p>Una cookie es un fichero que se descarga en tu ordenador, smartphone o tablet al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo.</p>
+      <h2>Qu&eacute; es una cookie</h2>
+      <p>Una cookie es un peque&ntilde;o fichero que un sitio web guarda en tu dispositivo al visitarlo y que
+      permite recordar informaci&oacute;n entre visitas. Existen tecnolog&iacute;as equivalentes, como el
+      almacenamiento local del navegador, que cumplen la misma funci&oacute;n y se rigen por las mismas
+      reglas.</p>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">¿Qué tipos de cookies utiliza esta página web?</h2>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Cookies Técnicas (Necesarias):</strong> Son aquellas necesarias para el funcionamiento operativo básico de la web. En nuestro caso, guardamos una cookie local (`cookieConsent`) para recordar tu elección de aceptar o cerrar el aviso de cookies y no tener que mostrártelo continuamente.</li>
-            </ul>
+      <h2>Qu&eacute; guarda esta web</h2>
+      <p>Una &uacute;nica entrada t&eacute;cnica, en el almacenamiento local de tu navegador:</p>
+      <div class="ficha">
+        <div class="fila"><span class="k">Nombre</span><span class="v">cookieConsent</span></div>
+        <div class="fila"><span class="k">Tipo</span><span class="v">T&eacute;cnica, propia</span></div>
+        <div class="fila"><span class="k">Finalidad</span><span class="v">Recordar si has aceptado o rechazado el aviso, para no volver a mostrarlo</span></div>
+        <div class="fila"><span class="k">Duraci&oacute;n</span><span class="v">Hasta que borres los datos de navegaci&oacute;n</span></div>
+      </div>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">Aceptación o rechazo de Cookies</h2>
-            <p>Al acceder a nuestro sitio, te mostraremos un aviso informativo sobre nuestras cookies. Puedes elegir aceptar el uso o no hacer nada (las cookies técnicas estrictamente necesarias seguirán activas para que la web funcione y recuerde tu elección de cerrarlo).</p>
+      <div class="nota">
+        <p><strong>No hay anal&iacute;tica ni publicidad.</strong> Esta web no utiliza Google Analytics, ni
+        p&iacute;xeles de redes sociales, ni cookies de terceros con fines publicitarios o de seguimiento.
+        No se elabora ning&uacute;n perfil de navegaci&oacute;n.</p>
+      </div>
 
-            <h2 class="text-2xl font-semibold text-white mt-8 mb-4">¿Cómo puedo desactivar o eliminar las cookies?</h2>
-            <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador instalado en tu ordenador:</p>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Chrome:</strong> Configuración -> Privacidad y seguridad -> Cookies y otros datos de sitios.</li>
-                <li><strong>Firefox:</strong> Ajustes -> Privacidad & Seguridad -> Cookies y datos del sitio.</li>
-                <li><strong>Safari:</strong> Preferencias -> Privacidad.</li>
-                <li><strong>Edge:</strong> Configuración -> Cookies y permisos del sitio.</li>
-            </ul>
-        </div>
-    </main>
+      <h2>Servicios externos que intervienen</h2>
+      <ul>
+        <li><strong>Google Fonts:</strong> las tipograf&iacute;as se cargan desde servidores de Google, lo que
+        implica que tu direcci&oacute;n IP se comunica a Google al abrir la p&aacute;gina. No se instalan cookies
+        por este motivo.</li>
+        <li><strong>FormSubmit:</strong> solo interviene si env&iacute;as el formulario de contacto, para hacer
+        llegar el mensaje. Se detalla en la <a href="politica-privacidad.html">pol&iacute;tica de
+        privacidad</a>.</li>
+      </ul>
 
-    <footer class="bg-black border-t border-white/10 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-600">
-            <p>&copy; 2024 Itálica IA. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      <h2>C&oacute;mo desactivar o borrar el almacenamiento</h2>
+      <p>Puedes borrarlo en cualquier momento desde tu navegador:</p>
+      <ul>
+        <li><strong>Chrome:</strong> Configuraci&oacute;n &rarr; Privacidad y seguridad &rarr; Cookies y otros datos de sitios.</li>
+        <li><strong>Firefox:</strong> Ajustes &rarr; Privacidad y seguridad &rarr; Cookies y datos del sitio.</li>
+        <li><strong>Safari:</strong> Preferencias &rarr; Privacidad.</li>
+        <li><strong>Edge:</strong> Configuraci&oacute;n &rarr; Cookies y permisos del sitio.</li>
+      </ul>
+      <p>Al tratarse &uacute;nicamente de una entrada t&eacute;cnica, borrarla no afecta al funcionamiento de la
+      web: solo har&aacute; que el aviso vuelva a mostrarse.</p>
+
+      <p class="actualizado">&Uacute;ltima actualizaci&oacute;n: 31 de agosto de 2026.</p>
+    </div>
+  </div>
+</main>
+
+<div class="env">
+  <div class="pie">
+    <span>&copy; 2026 It&aacute;lica IA &middot; Madrid</span>
+    <span><a href="aviso-legal.html">Aviso legal</a> &middot; <a href="politica-privacidad.html">Privacidad</a> &middot; <a href="politica-cookies.html">Cookies</a></span>
+  </div>
+</div>
+
 </body>
 </html>
