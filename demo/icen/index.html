@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Máster en Nutrición y Suplementación Deportiva · ICEN</title>
+<!-- Demo privada preparada por Itálica IA para ICEN (reunión del 9-nov-2026).
+     Copia del formulario de icen.es/master-de-nutricion-y-suplementacion-deportiva/ (leído el 6-nov).
+     Al enviar, n8n lanza la llamada del asistente de voz. No enlazada desde la web. -->
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1e293b;line-height:1.55;background:#fff}
+h1,h3{margin:0 0 16px;font-weight:700;line-height:1.2;color:#03357B}
+p{margin:0 0 16px}
+.hero{background:#fff;padding:48px 20px 56px}
+.grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.grid>*{min-width:0}
+.hero h1{font-size:36px;line-height:1.15;margin-bottom:20px;letter-spacing:-.5px}
+.azul{color:#03357B}.celeste{color:#2E86C1}
+.lead{font-size:16px;color:#475569;margin-bottom:24px;max-width:560px}
+.bullets{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.bullets li{display:flex;align-items:flex-start;gap:8px;font-weight:600;font-size:13.5px}
+.bullets li::before{content:"";flex-shrink:0;width:18px;height:18px;margin-top:1px;border-radius:50%;background:#03357B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/12px no-repeat}
+.logo img{height:40px;width:auto;display:block;mix-blend-mode:multiply}
+.form{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:28px;box-shadow:0 10px 40px rgba(3,53,123,.08)}
+.form h3{font-size:22px;margin-bottom:6px}
+.sub{font-size:14px;color:#475569;margin-bottom:18px}
+.form input[type=text],.form input[type=email],.form input[type=tel]{width:100%;padding:12px 14px;border:1px solid #E5E7EB;border-radius:8px;font-size:14px;margin-bottom:10px;background:#fff;font-family:inherit;color:#1e293b}
+.form input:focus{outline:none;border-color:#03357B;box-shadow:0 0 0 3px rgba(3,53,123,.1)}
+.tel{display:flex;margin-bottom:10px}
+.tel .pref{display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #E5E7EB;border-right:0;border-radius:8px 0 0 8px;font-size:14px;color:#1e293b;background:#F8FAFC;white-space:nowrap}
+.tel input{margin-bottom:0!important;border-radius:0 8px 8px 0!important}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#475569;margin:8px 0 14px}
+.check input{margin:2px 0 0}
+.check a{color:#03357B}
+button{width:100%;background:#FBC02D;color:#1e293b;font-weight:800;padding:14px;border-radius:8px;border:none;cursor:pointer;font-size:15px;font-family:inherit}
+button:hover{background:#F9A825}
+button:disabled{opacity:.7;cursor:wait}
+.bottom{font-size:12px;color:#475569;text-align:center;margin:12px 0 0}
+.err{display:none;background:#FEF2F2;color:#991B1B;border:1px solid #FECACA;border-radius:8px;padding:10px 12px;font-size:13px;margin:0 0 12px}
+.ok{display:none;text-align:center;padding:24px 4px}
+.ok .circ{width:56px;height:56px;border-radius:50%;background:#03357B;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.ok h3{margin-bottom:8px}
+.ok p{color:#475569;font-size:15px;margin:0}
+.pie{text-align:center;font-size:11px;color:#94A3B8;padding:0 20px 24px}
+@media (max-width:900px){.grid{grid-template-columns:1fr;gap:28px}.hero{padding:28px 16px 40px}.hero h1{font-size:28px}.bullets{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<section class="hero">
+ <div class="grid">
+  <div>
+   <h1><span class="azul">Máster de formación permanente en</span><br><span class="celeste">Nutrición y Suplementación Deportiva</span></h1>
+   <p class="lead">El conocimiento más vasto y completo del mundo universitario en ciencia y aplicabilidad práctica de la Nutrición Deportiva de la mano de los mayores referentes internacionales</p>
+   <ul class="bullets"><li>60 créditos ECTS</li><li>100% online</li><li>Inicio en noviembre</li><li>Título universitario</li><li>Profesores internacionales</li></ul>
+   <div class="logo"><img src="logo-icen.png" alt="ICEN" width="400" height="183"></div>
+  </div>
+  <div class="form">
+   <form id="f" novalidate>
+    <h3>Solicita información</h3>
+    <p class="sub">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+    <div class="err" id="err"></div>
+    <input type="text" name="nombre" placeholder="Nombre y apellidos *" autocomplete="name" required>
+    <input type="email" name="email" placeholder="Email *" autocomplete="email" required>
+    <input type="text" name="pais" placeholder="País *" autocomplete="country-name" required>
+    <div class="tel"><span class="pref"><svg width="20" height="14" viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg>+34</span>
+     <input type="tel" name="telefono" placeholder="Teléfono *" autocomplete="tel-national" inputmode="tel" required></div>
+    <label class="check"><input type="checkbox" name="consent" required> Acepto la política de privacidad y el tratamiento de mis datos.</label>
+    <button type="submit" id="b">Solicita información</button>
+    <p class="bottom">Uno de nuestros asesores revisará tu solicitud y te contactará lo antes posible.</p>
+   </form>
+   <div class="ok" id="ok">
+    <div class="circ"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+    <h3>¡Gracias, <span id="n"></span>!</h3>
+    <p>Hemos recibido tu solicitud. Te llamamos ahora mismo.</p>
+   </div>
+  </div>
+ </div>
+</section>
+<p class="pie">Demostración preparada por Itálica IA para ICEN</p>
+<script>
+(function(){
+  var URL_ENVIO = 'https://n8n.automatizacionesluis.com/webhook/icen-demo-formulario';
+  var f = document.getElementById('f'), b = document.getElementById('b'), err = document.getElementById('err');
+  function fallo(t){ err.textContent = t; err.style.display = 'block'; b.disabled = false; b.textContent = 'Solicita información'; }
+  f.addEventListener('submit', function(e){
+    e.preventDefault(); err.style.display = 'none';
+    var d = new FormData(f);
+    var nombre = (d.get('nombre')||'').trim(), email = (d.get('email')||'').trim(),
+        pais = (d.get('pais')||'').trim(), tel = (d.get('telefono')||'').trim();
+    if (!nombre || !email || !pais || !tel) return fallo('Rellena todos los campos marcados con *.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fallo('Revisa el email.');
+    if (!d.get('consent')) return fallo('Para continuar, acepta la política de privacidad.');
+    b.disabled = true; b.textContent = 'Enviando...';
+    // Formato de formulario clásico: el navegador no hace consulta previa (CORS) y n8n lo lee directo.
+    var cuerpo = new URLSearchParams({nombre: nombre, email: email, pais: pais, telefono: tel,
+      programa: 'Máster en Nutrición y Suplementación Deportiva'});
+    var ctl = new AbortController(); var t = setTimeout(function(){ ctl.abort(); }, 25000);
+    fetch(URL_ENVIO, {method: 'POST', body: cuerpo, signal: ctl.signal})
+      .then(function(r){ return r.json(); })
+      .then(function(r){
+        clearTimeout(t);
+        if (r && r.ok) {
+          document.getElementById('n').textContent = nombre.split(/\s+/)[0];
+          f.style.display = 'none'; document.getElementById('ok').style.display = 'block';
+        } else { fallo((r && r.motivo) || 'No hemos podido enviar tu solicitud. Inténtalo de nuevo.'); }
+      })
+      .catch(function(){ clearTimeout(t); fallo('No hemos podido enviar tu solicitud. Revisa tu conexión e inténtalo de nuevo.'); });
+  });
+})();
+</script>
+</body>
+</html>
