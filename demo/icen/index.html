@@ -26,7 +26,7 @@ p{margin:0 0 16px}
 .form{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:28px;box-shadow:0 10px 40px rgba(3,53,123,.08)}
 .form h3{font-size:22px;margin-bottom:6px}
 .sub{font-size:14px;color:#475569;margin-bottom:18px}
-.form input[type=text],.form input[type=email],.form input[type=tel]{width:100%;padding:12px 14px;border:1px solid #E5E7EB;border-radius:8px;font-size:14px;margin-bottom:10px;background:#fff;font-family:inherit;color:#1e293b}
+.form select,.form input[type=text],.form input[type=email],.form input[type=tel]{width:100%;padding:12px 14px;border:1px solid #E5E7EB;border-radius:8px;font-size:14px;margin-bottom:10px;background:#fff;font-family:inherit;color:#1e293b}
 .form input:focus{outline:none;border-color:#03357B;box-shadow:0 0 0 3px rgba(3,53,123,.1)}
 .tel{display:flex;margin-bottom:10px}
 .tel .pref{display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #E5E7EB;border-right:0;border-radius:8px 0 0 8px;font-size:14px;color:#1e293b;background:#F8FAFC;white-space:nowrap}
@@ -66,6 +66,7 @@ button:disabled{opacity:.7;cursor:wait}
     <input type="text" name="pais" placeholder="País *" autocomplete="country-name" required>
     <div class="tel"><span class="pref"><svg width="20" height="14" viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg>+34</span>
      <input type="tel" name="telefono" placeholder="Teléfono *" autocomplete="tel-national" inputmode="tel" required></div>
+    <select name="programa" aria-label="Programa de interés" required><optgroup label="Másteres"><option selected>Máster en Nutrición y Suplementación Deportiva</option><option>Máster en Entrenamiento Personal</option><option>Máster en Hipertrofia Muscular</option><option>Máster en Nutrición Clínica</option><option>Máster en Nutrición en la Mujer Deportista</option><option>Máster en Nutrición y Deportes de Resistencia</option><option>Máster en Prevención y Readaptación</option><option>Máster en Nutrición, Ejercicio y Salud para la Longevidad</option><option>Máster en CrossTraining</option></optgroup><optgroup label="Grado"><option>Grado en Nutrición Humana y Dietética</option></optgroup><optgroup label="FP"><option>FP en Acondicionamiento Físico (TSAF)</option><option>Técnico Superior en Dietética (TSD)</option></optgroup><optgroup label="Cursos"><option>Curso de Entrenador Personal (CEP)</option></optgroup></select>
     <label class="check"><input type="checkbox" name="consent" required> Acepto la política de privacidad y el tratamiento de mis datos.</label>
     <button type="submit" id="b">Solicita información</button>
     <p class="bottom">Uno de nuestros asesores revisará tu solicitud y te contactará lo antes posible.</p>
@@ -95,7 +96,7 @@ button:disabled{opacity:.7;cursor:wait}
     b.disabled = true; b.textContent = 'Enviando...';
     // Formato de formulario clásico: el navegador no hace consulta previa (CORS) y n8n lo lee directo.
     var cuerpo = new URLSearchParams({nombre: nombre, email: email, pais: pais, telefono: tel,
-      programa: 'Máster en Nutrición y Suplementación Deportiva'});
+      programa: d.get('programa') || ''});
     var ctl = new AbortController(); var t = setTimeout(function(){ ctl.abort(); }, 25000);
     fetch(URL_ENVIO, {method: 'POST', body: cuerpo, signal: ctl.signal})
       .then(function(r){ return r.json(); })
