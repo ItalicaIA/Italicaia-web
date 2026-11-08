@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Máster en Nutrición y Suplementación Deportiva · ICEN</title>
-<!-- Demo privada preparada por Itálica IA para ICEN (reunión del 9-nov-2026).
-     Copia del formulario de icen.es/master-de-nutricion-y-suplementacion-deportiva/ (leído el 6-nov).
+<!-- Demo privada preparada por Itálica IA para ICEN (reunión del 10-nov-2026).
+     Copia del formulario de icen.es/master-de-nutricion-y-suplementacion-deportiva/ (leído el 6-nov);
+     la cabecera cambia con el máster elegido, con el texto de la página de cada uno.
      Al enviar, n8n lanza la llamada del asistente de voz. No enlazada desde la web. -->
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -51,9 +52,9 @@ button:disabled{opacity:.7;cursor:wait}
 <section class="hero">
  <div class="grid">
   <div>
-   <h1><span class="azul">Máster de formación permanente en</span><br><span class="celeste">Nutrición y Suplementación Deportiva</span></h1>
-   <p class="lead">El conocimiento más vasto y completo del mundo universitario en ciencia y aplicabilidad práctica de la Nutrición Deportiva de la mano de los mayores referentes internacionales</p>
-   <ul class="bullets"><li>60 créditos ECTS</li><li>100% online</li><li>Inicio en noviembre</li><li>Título universitario</li><li>Profesores internacionales</li></ul>
+   <h1><span class="azul">Máster de formación permanente en</span><br><span class="celeste" id="h-tit">Nutrición y Suplementación Deportiva</span></h1>
+   <p class="lead" id="h-lead">El conocimiento más vasto y completo del mundo universitario en ciencia y aplicabilidad práctica de la Nutrición Deportiva de la mano de los mayores referentes internacionales</p>
+   <ul class="bullets" id="h-bul"><li>60 créditos ECTS</li><li>100% online</li><li>Inicio en noviembre</li><li>Título universitario</li><li>Profesores internacionales</li></ul>
    <div class="logo"><img src="logo-icen.png" alt="ICEN" width="400" height="183"></div>
   </div>
   <div class="form">
@@ -82,6 +83,35 @@ button:disabled{opacity:.7;cursor:wait}
 <p class="pie">Demostración preparada por Itálica IA para ICEN</p>
 <script>
 (function(){
+  // Cabecera de cada máster, copiada de su página en icen.es (leídas el 6-nov).
+  var MASTERES = {
+    'Máster en Nutrición y Suplementación Deportiva': {
+      t: 'Nutrición y Suplementación Deportiva',
+      l: 'El conocimiento más vasto y completo del mundo universitario en ciencia y aplicabilidad práctica de la Nutrición Deportiva de la mano de los mayores referentes internacionales',
+      b: ['60 créditos ECTS', '100% online', 'Inicio en noviembre', 'Título universitario', 'Profesores internacionales']},
+    'Máster en Hipertrofia Muscular': {
+      t: 'Hipertrofia Muscular, Pérdida de Grasa y Competición en Deportes de Estética',
+      l: 'Hazte experto en una de las skills más demandadas en el sector del fitness y domina todas las variables que afectan a la composición corporal.',
+      b: ['60 créditos ECTS', '100% online', 'Inicio en noviembre', 'Paga en hasta 24 meses']},
+    'Máster en Entrenamiento Personal': {
+      t: 'Entrenamiento Personal y Fisiología Aplicada al Ejercicio Físico',
+      l: 'Especialízate con nuestro máster de 60 ECTS en entrenamiento personal y fisiología aplicada al ejercicio. Diseña programas basados en evidencia para maximizar la composición corporal, el rendimiento y la salud de tus clientes.',
+      b: ['60 créditos ECTS', '100% online', 'Inicio en noviembre', 'Paga en hasta 24 meses']},
+    'Máster en Nutrición Clínica': {
+      t: 'Nutrición Clínica',
+      l: 'Especialízate en la valoración del estado nutricional, el diseño de intervenciones dietético-nutricionales y el soporte nutricional en las patologías agudas y crónicas más prevalentes.',
+      b: ['60 ECTS · 1500 horas', '100% online · a tu ritmo', 'Claustro clínico de doctores y dietistas-nutricionistas', 'Casos clínicos reales']}
+  };
+  var sel = document.querySelector('select[name=programa]');
+  function pintar(){
+    var m = MASTERES[sel.value]; if (!m) return;
+    document.getElementById('h-tit').textContent = m.t;
+    document.getElementById('h-lead').textContent = m.l;
+    var ul = document.getElementById('h-bul'); ul.innerHTML = '';
+    m.b.forEach(function(x){ var li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
+    document.title = 'Máster en ' + m.t + ' · ICEN';
+  }
+  sel.addEventListener('change', pintar);
   var URL_ENVIO = 'https://n8n.automatizacionesluis.com/webhook/icen-demo-formulario';
   var f = document.getElementById('f'), b = document.getElementById('b'), err = document.getElementById('err');
   function fallo(t){ err.textContent = t; err.style.display = 'block'; b.disabled = false; b.textContent = 'Solicita información'; }
